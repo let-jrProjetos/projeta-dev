@@ -1,6 +1,12 @@
-import '../index.css';
+import "../index.css";
+import { Footer } from "./components/FooterComponent/Footer";
+
 function App() {
-	return <div></div>;
+  return (
+    <div>
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
