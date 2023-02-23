@@ -8,11 +8,18 @@ import nathalia from "../../assets/img/nathaliaBuchholz.jpg";
 
 export default function AboutUs() {
   return (
-    <div className="bg-grey-123">
-      <div>
-        <img alt="Imagem - Analice Marques" src={analice}></img>
+    <div className="bg-grey-123  border-4 text-black	">
+      <div className="flex flex-col	items-center gap-6  m-6 p-2 bg-white rounded-lg">
+        <img
+          className=" w-24 rounded-full"
+          alt="Imagem - Analice Marques"
+          src={analice}
+        ></img>
+        <div className="flex justify-around items-center		">
+          <h3 className="text-2xl font-black	">Analice Marques </h3>
+          <div className="badge badge-accent"> GitHub</div>
+        </div>
 
-        <h3>Analice Marques</h3>
         <p>
           Analice Marques, 28 anos, Desenvolvedora Front-end. Formada em
           Engenharia Civil decidi fazer transição de carreira para a área da
@@ -21,9 +28,17 @@ export default function AboutUs() {
           mundo virtual.”
         </p>
       </div>
-      <div>
-        <img src={bruno} alt="Imagem - Bruno Goulart" />
-        <h3>Bruno Goulart</h3>
+      <div className="flex flex-col	items-center gap-6 m-6 p-2 bg-white rounded-lg">
+        <img
+          className=" w-24 rounded-full"
+          src={bruno}
+          alt="Imagem - Bruno Goulart"
+        />
+        <div className="flex justify-around	items-center		">
+          <h3 className="text-2xl font-black	">Bruno Goulart</h3>
+          <div className="badge badge-accent">GitHub</div>
+        </div>
+
         <p>
           Bruno Goulart, 30 anos, em transição de carreira para Desenvolvedor
           Front-end, buscando novos desafios e oportunidades para crescimento
@@ -31,17 +46,33 @@ export default function AboutUs() {
           aventura sem um fim.
         </p>
       </div>
-      <div>
-        <img src={larissa} alt="Imagem - Larissa Terada" />
-        <h3>Larissa Terada</h3>
+      <div className="flex flex-col	items-center gap-6  m-6 p-2 bg-white rounded-lg">
+        <img
+          className=" w-24 rounded-full"
+          src={larissa}
+          alt="Imagem - Larissa Terada"
+        />
+        <div className="flex justify-around	items-center		">
+          <h3 className="text-2xl font-black	">Larissa Terada</h3>
+          <div className="badge badge-accent">GitHub</div>
+        </div>
+
         <p>
           Larissa Terada, 25 anos, formada Bailarina profissional e em transiçāo
           de carreira para o mundo da Tecnologia.
         </p>
       </div>
-      <div>
-        <img src={michelle} alt="Imagem - Michelle Antunes" />
-        <h3>Michelle Antunes</h3>
+      <div className="flex flex-col	items-center gap-6  m-6 p-2 bg-white rounded-lg">
+        <img
+          className=" w-24 rounded-full"
+          src={michelle}
+          alt="Imagem - Michelle Antunes"
+        />
+        <div className="flex justify-around	items-center		">
+          <h3 className="text-2xl font-black	">Michelle Antunes</h3>
+          <div className="badge badge-accent">GitHub</div>
+        </div>
+
         <p>
           Michelle Antunes, 29 anos, Administradora de Empresas por formação,
           pós-graduada em Gestão Financeira/Controladoria por amar números e
@@ -51,9 +82,17 @@ export default function AboutUs() {
           oportunidades.{" "}
         </p>
       </div>
-      <div>
-        <img src={nathalia} alt="Imagem - Nathália Buchholz" />
-        <h3>Nathália Buchholz</h3>
+      <div className="flex flex-col	items-center gap-6  m-6 p-2 bg-white rounded-lg">
+        <img
+          className=" w-24 rounded-full"
+          src={nathalia}
+          alt="Imagem - Nathália Buchholz"
+        />
+        <div className="flex justify-around	items-center		">
+          <h3 className="text-2xl font-black	">Nathália Buchholz</h3>
+          <div className="badge badge-accent">GitHub</div>
+        </div>
+
         <p>
           Nathalia Buchholz, 27 anos, Entre as aventuras de caçar dragões em
           mundos épicos e desvendar bugs de código, em um aprendizado constante.
