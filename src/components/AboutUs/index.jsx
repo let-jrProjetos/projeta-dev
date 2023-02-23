@@ -8,14 +8,11 @@ import nathalia from "../../assets/img/nathaliaBuchholz.jpg";
 
 export default function AboutUs() {
   return (
-    <div>
+    <div className="bg-grey-123">
       <div>
-        <img
-          className="rounded-xl px-10 pt-10 w-1 h-1"
-          alt="Imagem - Analice Marques"
-          src={analice}
-        ></img>
-        <h3 className="card-title">Analice Marques</h3>
+        <img alt="Imagem - Analice Marques" src={analice}></img>
+
+        <h3>Analice Marques</h3>
         <p>
           Analice Marques, 28 anos, Desenvolvedora Front-end. Formada em
           Engenharia Civil decidi fazer transição de carreira para a área da
@@ -24,12 +21,8 @@ export default function AboutUs() {
           mundo virtual.”
         </p>
       </div>
-      <div className="card w-96 bg-base-100 shadow-xl">
-        <img
-          src={bruno}
-          alt="Imagem - Bruno Goulart"
-          className="rounded-xl px-10 pt-10"
-        />
+      <div>
+        <img src={bruno} alt="Imagem - Bruno Goulart" />
         <h3>Bruno Goulart</h3>
         <p>
           Bruno Goulart, 30 anos, em transição de carreira para Desenvolvedor
@@ -38,24 +31,16 @@ export default function AboutUs() {
           aventura sem um fim.
         </p>
       </div>
-      <div className="card w-96 bg-base-100 shadow-xl">
-        <img
-          src={larissa}
-          alt="Imagem - Larissa Terada"
-          className="rounded-xl px-10 pt-10"
-        />
+      <div>
+        <img src={larissa} alt="Imagem - Larissa Terada" />
         <h3>Larissa Terada</h3>
         <p>
           Larissa Terada, 25 anos, formada Bailarina profissional e em transiçāo
           de carreira para o mundo da Tecnologia.
         </p>
       </div>
-      <div className="card w-96 bg-base-100 shadow-xl">
-        <img
-          src={michelle}
-          alt="Imagem - Michelle Antunes"
-          className="rounded-xl px-10 pt-10"
-        />
+      <div>
+        <img src={michelle} alt="Imagem - Michelle Antunes" />
         <h3>Michelle Antunes</h3>
         <p>
           Michelle Antunes, 29 anos, Administradora de Empresas por formação,
@@ -66,12 +51,8 @@ export default function AboutUs() {
           oportunidades.{" "}
         </p>
       </div>
-      <div className="card w-96 bg-base-100 shadow-xl">
-        <img
-          src={nathalia}
-          alt="Imagem - Nathália Buchholz"
-          className="rounded-xl px-10 pt-10"
-        />
+      <div>
+        <img src={nathalia} alt="Imagem - Nathália Buchholz" />
         <h3>Nathália Buchholz</h3>
         <p>
           Nathalia Buchholz, 27 anos, Entre as aventuras de caçar dragões em
