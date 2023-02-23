@@ -1,6 +1,11 @@
-import '../index.css';
+import AboutUs from "./components/AboutUs";
+
 function App() {
-	return <div></div>;
+  return (
+    <div>
+      <AboutUs />
+    </div>
+  );
 }
 
 export default App;
