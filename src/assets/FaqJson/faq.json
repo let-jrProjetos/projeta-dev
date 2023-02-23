@@ -1,0 +1,32 @@
+{
+  "questions": [
+    {
+      "question": "O que é NossoProjeto?",
+      "answer": "NossoProjeto é uma plataforma que permite que os desenvolvedores compartilhem seus projetos web e procurem por colaboradores ou membros para sua equipe."
+    },
+    {
+      "question": "Como posso participar de um projeto compartilhado em NossoProjeto?",
+      "answer": "Para participar de um projeto compartilhado em NossoProjeto, você pode navegar pelos projetos disponíveis e entrar em contato com o desenvolvedor para oferecer sua ajuda. Certifique-se de fornecer informações detalhadas sobre suas habilidades e experiência."
+    },
+    {
+      "question": "Eu preciso ser um desenvolvedor experiente para participar de um projeto compartilhado em NossoProjeto?",
+      "answer": "Não necessariamente. Embora muitos projetos compartilhados no NossoProjeto exijam habilidades técnicas específicas, existem projetos que podem precisar de outras habilidades, como design, marketing ou gerenciamento de projetos."
+    },
+    {
+      "question": "Como posso encontrar projetos interessantes para participar no NossoProjeto?",
+      "answer": "Para encontrar projetos interessantes para participar no NossoProjeto, você pode pesquisar por tecnologias específicas, categorias ou simplesmente navegar pelos projetos mais populares ou recentes que estejam procurando por colaboradores."
+    },
+    {
+      "question": "Como posso entrar em contato com os desenvolvedores para oferecer minha ajuda em um projeto compartilhado no NossoProjeto?",
+      "answer": "Há uma opção de contato na página do projeto compartilhado, onde você pode enviar uma mensagem ao desenvolvedor para oferecer sua ajuda. Certifique-se de incluir informações sobre suas habilidades e como você pode contribuir para o projeto."
+    },
+    {
+      "question": "Eu preciso pagar para participar de um projeto compartilhado no NossoProjeto?",
+      "answer": "Não, os projetos são gratuitos. No entanto, pode haver projetos que ofereçam compensação financeira ou opções de compartilhamento de lucros, dependendo da natureza do projeto e da colaboração envolvida."
+    },
+    {
+      "question": "Como posso garantir que o projeto em que estou participando seja legítimo e seguro?",
+      "answer": "Antes de se comprometer com um projeto, certifique-se de fazer sua pesquisa e verificar a credibilidade do desenvolvedor e do projeto em si. Você também pode procurar feedback e avaliações de outros colaboradores ou usuários do site. É sempre importante proteger suas informações pessoais e garantir que os termos do projeto estejam claros e acordados por ambas as partes."
+    }
+  ]
+}
