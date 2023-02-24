@@ -1,10 +1,7 @@
-import '../index.css';
-import { ProjectForm } from './components/formcomponent/ProjectForm';
+import "./App.css";
 
 function App() {
-	return <div>
-		<ProjectForm/>
-	</div>;
+  return <div></div>;
 }
 
 export default App;
