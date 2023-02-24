@@ -74,12 +74,12 @@ export default function AboutUs() {
         </div>
 
         <p className="font-Montserrat">
-          Michelle Antunes, 29 anos, Administradora de Empresas por formação,
-          pós-graduada em Gestão Financeira/Controladoria por amar números e
-          Desenvolvedora Frond-end , atualmente em transição de carreira para a
-          área da tecnologia. Conciliando todos os conhecimentos já adquiridos
-          anteriormente com um novo trabalho, buscando sempre novas e melhores
-          oportunidades.{" "}
+          npm Michelle Antunes, 29 anos, Administradora de Empresas por
+          formação, pós-graduada em Gestão Financeira/Controladoria por amar
+          números e Desenvolvedora Frond-end , atualmente em transição de
+          carreira para a área da tecnologia. Conciliando todos os conhecimentos
+          já adquiridos anteriormente com um novo trabalho, buscando sempre
+          novas e melhores oportunidades.{" "}
         </p>
       </div>
       <div className="flex flex-col	items-center gap-6  m-6 p-2 bg-white rounded-lg">
