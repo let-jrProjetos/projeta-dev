@@ -7,102 +7,105 @@ export const ProjectForm = () => {
     const [dueDate, setDueDate] = useState("")
     const [summary, setSummary] = useState("Descreva brevemente seu projeto")
     const [desiredOutcome, setDesiredOutcome] = useState("Resultado esperado:")
-    const [beneficts, setBeneficts] = useState("Exemplo: PCSSicipando do projeto voce irá desenvolver tanto suas hard skills quanto as softs.")
-    const [schedule, setSchedule] = useState("Exemplo: Todas as Segundas, QuCSSas e Sextas-feiras as 18:00.s")
+    const [beneficts, setBeneficts] = useState("Exemplo: Participando do projeto voce irá desenvolver tanto suas hard skills quanto as softs.")
+    const [schedule, setSchedule] = useState("Exemplo: Todas as Segundas, Quartas e Sextas-feiras as 18:00.s")
     const [registrationDueDate, setRegistrationDueDate] = useState("")
     // const [languages, setLanguages] = useState("")
 
     return(
-        <div className="bg-[#F6F5F4] flex flex-col items-center">
+        <div className="bg-[#F6F5F4] flex flex-col items-center py-12">
             <header className="h-20 text-black">Cabeçalho</header>
             <div className="bg-[#FFFFFF] rounded-xl px-12 py-8 flex flex-row items-center gap-x-8">
                 <img className="rounded-full" src={imageUrl} alt="Capa para o Projeto // Logo ProjetaDev"/>
                 <p className="text-black">{projectName}</p>
             </div>
-            <form>
+            <form className="w-4/5 p-8" >
                 <label>
-                    <p>Nome do Projeto:</p>
-                    <input value={projectName} onChange={(event) => setProjectName(event.target.value)}/>
+                    <p className="text-black">Nome do Projeto:</p>
+                    <input className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-black" value={projectName} onChange={(event) => setProjectName(event.target.value)}/>
                 </label>
                 <label>
-                    <p>Link da imagem do projeto:</p>
-                    <input type="url" value={imageUrl} onChange={(event) => setImageUrl(event.target.value)}/>
+                    <p className="text-black">Link da imagem do projeto:</p>
+                    <input className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-black" type="url" value={imageUrl} onChange={(event) => setImageUrl(event.target.value)}/>
                 </label>
-                <div className="flex flex-row gap-8">
-                    <label>
-                        <p>Data Estimada de Inicio:</p>
-                        <input type="date" value={stCSSDate} onChange={(event) => setStCSSDate(event.target.value)} />
+                <div className="flex flex-row w-full gap-6 mb-2">
+                    <label className="w-2/4">
+                        <p className="text-black">Data Estimada de Inicio:</p>
+                        <input className="bg-[#C3DCE3] w-full px-4 py-2 text-black" type="date" value={stCSSDate} onChange={(event) => setStCSSDate(event.target.value)} />
                     </label>
-                    <label>
-                        <p>Data Estimada de Inicio:</p>
-                        <input type="date" value={dueDate} onChange={(event) => setDueDate(event.target.value)} />
+                    <label className="w-2/4">
+                        <p className="text-black">Data Estimada de Inicio:</p>
+                        <input className="bg-[#C3DCE3] w-full px-4 py-2 text-black"  type="date" value={dueDate} onChange={(event) => setDueDate(event.target.value)} />
                     </label>
                 </div>
                 <label>
-                    <p>Resumo:</p>
-                    <input value={summary} onChange={(event) => setSummary(event.target.value)}/>
+                    <p className="text-black">Resumo:</p>
+                    <input className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-black"  value={summary} onChange={(event) => setSummary(event.target.value)}/>
                 </label>
                 <label>
-                    <p>Objetivo do projeto:</p>
-                    <input value={desiredOutcome} onChange={(event) => setDesiredOutcome(event.target.value)}/>
+                    <p className="text-black">Objetivo do projeto:</p>
+                    <input className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-black"  value={desiredOutcome} onChange={(event) => setDesiredOutcome(event.target.value)}/>
                 </label>
                 <label>
-                    <p>Benefícios em pCSSicipar do projeto:</p>
-                    <input value={beneficts} onChange={(event) => setBeneficts(event.target.value)}/>
+                    <p className="text-black">Benefícios em participar do projeto:</p>
+                    <input className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-black"  value={beneficts} onChange={(event) => setBeneficts(event.target.value)}/>
                 </label>
                 <label>
-                    <p>Agenda:</p>
-                    <input value={schedule} onChange={(event) => setSchedule(event.target.value)}/>
+                    <p className="text-black">Agenda:</p>
+                    <input className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-black"  value={schedule} onChange={(event) => setSchedule(event.target.value)}/>
                 </label>
                 <label>
-                        <p>Data Limite de Inscriçāo:</p>
-                        <input type="date" value={registrationDueDate} onChange={(event) => setRegistrationDueDate(event.target.value)} />
+                    <p className="text-black">Data Limite de Inscriçāo:</p>
+                    <input className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-black"  type="date" value={registrationDueDate} onChange={(event) => setRegistrationDueDate(event.target.value)} />
                 </label>
                     {/* <p>Linguagens:</p>
                     <input type="checkbox" value={languages} onChange={(event) => setLanguages(event.target.value)}/> */}
-                <fieldset className="" >
-                    <legend>Escolha as linguagens que serão utilizadas</legend>
-                    <div>
-                        <input type="checkbox" id="SQL" name="language" value="SQL" />
-                        <label for="SQL">SQL</label>
+                <fieldset className="flex flex-wrap" >
+                    <legend className="text-black">Escolha as linguagens que serão utilizadas:</legend>
+                    <div className="w-2/4">
+                        <input type="checkbox" id="JavaScript" name="language" value="JavaScript" />
+                        <label className="text-black" for="JavaScript">JavaScript</label>
                     </div>
-                    <div>
+                    <div className="w-2/4">
+                        <input type="checkbox" id="Python" name="language" value="Phyton" />
+                        <label className="text-black" for="Python">Python</label>
+                    </div>
+                    <div className="w-2/4">
                         <input type="checkbox" id="HTML" name="language" value="HTML" />
-                        <label for="HTML">HTML</label>
+                        <label className="text-black" for="HTML">HTML</label>
                     </div>
-                    <div>
+                    <div className="w-2/4">
                         <input type="checkbox" id="CSS" name="language" value="CSS" />
-                        <label for="CSS">CSS</label>
+                        <label className="text-black" for="CSS">CSS</label>
                     </div>
-                    <div>
+                    <div className="w-2/4">
                         <input type="checkbox" id="C#" name="language" value="C#" />
-                        <label for="C#">C#</label>
+                        <label className="text-black" for="C#">C#</label>
                     </div>
-                    <div>
+                    <div className="w-2/4">
                         <input type="checkbox" id="TypeScript" name="language" value="TypeScript" />
-                        <label for="TypeScript">TypeScript</label>
+                        <label className="text-black" for="TypeScript">TypeScript</label>
                     </div>
-                    <div>
-                        <input type="checkbox" id="SQL" name="language" value="SQL" />
-                        <label for="SQL">SQL</label>
+                    <div className="w-2/4">
+                        <input type="checkbox" id="GO" name="language" value="Go" />
+                        <label className="text-black" for="GO">GO</label>
                     </div>
-                    <div>
+                    <div className="w-2/4">
                         <input type="checkbox" id="HTML" name="language" value="HTML" />
-                        <label for="HTML">HTML</label>
+                        <label className="text-black" for="HTML">HTML</label>
                     </div>
-                    <div>
+                    <div className="w-2/4">
                         <input type="checkbox" id="CSS" name="language" value="CSS" />
-                        <label for="CSS">CSS</label>
+                        <label className="text-black" for="CSS">CSS</label>
                     </div>
-                    <div>
+                    <div className="w-2/4 mb-2">
                         <input type="checkbox" id="other" name="language" value="other" />
-                        <label for="other">Other</label>
-                        <input type="text" id="otherValue" name="other" />
+                        <label className="text-black" for="other">Other</label>
+                        <input className="bg-[#C3DCE3]" type="text" id="otherValue" name="other" />
                     </div>
                 </fieldset>
-                <button type="submit">Publicar!</button>
             </form>
-
+            <button className="bg-[#2B788B] w-2/6 mb-2 px-4 py-2 text-white" type="submit">Publicar!</button>
         </div>
 
     )
