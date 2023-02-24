@@ -9,6 +9,10 @@ module.exports = {
         },
       },
     },
+    fontFamily: {
+      Dela: ["Dela Gothic One"],
+      Montserrat: ["Montserrat"],
+    },
   },
   plugins: [require("daisyui")],
 };
