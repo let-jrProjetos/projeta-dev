@@ -1,7 +1,3 @@
 @tailwind base;
 @tailwind components;
-@font-face {
-  font-family: "Icones";
-  src: url("fonts/icones.ttf") format("ttf");
-}
 @tailwind utilities;
