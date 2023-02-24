@@ -5,6 +5,11 @@ export const ProjectForm = () => {
     const [imageUrl,setImageUrl] = useState("https://picsum.photos/200/200")
     const [startDate,setStartDate] = useState("")
     const [dueDate,setDueDate] = useState("")
+    const [summary,setSummary] = useState("Descreva brevemente seu projeto")
+    const [desiredOutcome, setDesiredOutcome] = useState("Resultado esperado:")
+    const [benefictsOfProject,setBenefictsOfProject] = useState("Exemplo: Participando do projeto voce irá desenvolver tanto suas hard skills quanto as softs.")
+    const [projectSchedule, setProjectSchedule] = useState("Exemplo: Todas as Segundas, Quartas e Sextas-feiras as 18:00.s")
+    const [languages, setLanguages] = useState("")
 
     return(
         <div className="bg-[#F6F5F4] flex flex-col items-center">
