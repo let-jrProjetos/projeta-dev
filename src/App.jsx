@@ -1,7 +1,11 @@
 import "./App.css";
+import ProjectForm from "./components/formcomponent/ProjectForm";
+
 
 function App() {
-  return <div></div>;
+  return <div>
+    <ProjectForm/>
+    </div>;
 }
 
 export default App;

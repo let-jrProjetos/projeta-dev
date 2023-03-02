@@ -1,6 +1,8 @@
 import { useState } from "react"
+import { useForm } from "../../hooks/useForm";
 
-export const ProjectForm = () => {
+export default function ProjectForm () {
+    const { form, onChange } = useForm({})
     const [projectName, setProjectName] = useState("Nome do Projeto");
     const [imageUrl, setImageUrl] = useState("https://picsum.photos/200/200")
     const [startDate, setStartDate] = useState("")
@@ -46,10 +48,9 @@ export const ProjectForm = () => {
                 </div>
             </div>
             <form className="w-4/5 p-8" >
-                <label htmlFor="projectName">
+                <label htmlFor="projectName"/>
                     <p className="text-black">Nome do Projeto:</p>
                     <input id="projectName" className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]" value={projectName} onChange={(event) => setProjectName(event.target.value)}/>
-                </label>
                 <label htmlFor="link" >
                     <p className="text-black">Link da imagem do projeto:</p>
                     <input id="link" className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]" type="url" value={imageUrl} onChange={(event) => setImageUrl(event.target.value)}/>
