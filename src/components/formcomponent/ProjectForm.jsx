@@ -2,18 +2,23 @@ import { useState } from "react"
 import { useForm } from "../../hooks/useForm";
 
 export default function ProjectForm () {
-    const { form, onChange } = useForm({})
-    const [projectName, setProjectName] = useState("Nome do Projeto");
-    const [imageUrl, setImageUrl] = useState("https://picsum.photos/200/200")
-    const [startDate, setStartDate] = useState("")
-    const [dueDate, setDueDate] = useState("")
-    const [summary, setSummary] = useState("Descreva brevemente seu projeto")
-    const [desiredOutcome, setDesiredOutcome] = useState("Resultado esperado")
-    const [beneficts, setBeneficts] = useState("Exemplo: Participando do projeto voce irá desenvolver tanto suas hard skills quanto as softs.")
-    const [schedule, setSchedule] = useState("Exemplo: Todas as Segundas, Quartas e Sextas-feiras às 18:00")
-    const [registrationDueDate, setRegistrationDueDate] = useState("")
+    const { form, onChange } = useForm({ projectName:"", link:"", startDate:"", dueDate:"", summary:"", desiredOutcome:"", beneficts:"", schedule:"", registrationDueDate:"", otherLanguage:"" })
+
+    const projectExemple = 
+    { 
+        projectName:"Nome do Projeto",
+        link:"https://picsum.photos/200/200",
+        startDate:"Descreva brevemente seu projeto",
+        dueDate:"",
+        summary:"",
+        desiredOutcome:"Resultado esperado",
+        beneficts:"Exemplo: Participando do projeto voce irá desenvolver tanto suas hard skills quanto as softs.",
+        schedule:"Exemplo: Todas as Segundas, Quartas e Sextas-feiras às 18:00",
+        registrationDueDate:""
+    }
+
     const [languages, setLanguages] = useState([])
-    const [otherLanguage, setOtherLanguadge] = useState("")
+    // const [otherLanguage, setOtherLanguadge] = useState("")
     const [checked, setChecked] = useState(false)
 
     const languageList = [ "JavaScript", "Python", "HTML", "CSS", "C#", "TypeScript", "GO"]
@@ -31,74 +36,188 @@ export default function ProjectForm () {
         setChecked(false)
     } 
 
+    const submitForm = (event) => {
+        event.preventDefault()
+    }
+
     return(
         <div className="bg-[#F6F5F4] flex flex-col items-center py-12">
             <header className="h-20 text-black">Cabeçalho</header>
             <div className="bg-[#FFFFFF] rounded-xl px-12 py-8 flex flex-row items-center gap-x-8">
-                <img className="rounded-full" src={imageUrl} alt="Capa do Projeto"/>
-                <div>
-                    <p className="text-black">{projectName}</p>
-                    <p>{startDate}/{dueDate}</p>
-                    <p>{summary}</p>
-                    <p>{desiredOutcome}</p>
-                    <p>{beneficts}</p>
-                    <p>{schedule}</p>
-                    <p>Data limite de inscriçāo: {registrationDueDate}</p>
+                <img className="rounded-full" src={projectExemple.link} alt="Capa do Projeto"/>
+                <div className="text-black">
+                    <p>{projectExemple.projectName}</p>
+                    <p>{projectExemple.startDate}/{projectExemple.dueDate}</p>
+                    <p>{projectExemple.summary}</p>
+                    <p>{projectExemple.desiredOutcome}</p>
+                    <p>{projectExemple.beneficts}</p>
+                    <p>{projectExemple.schedule}</p>
+                    <p>Data limite de inscriçāo: {projectExemple.registrationDueDate}</p>
                     <p>{languages.join(', ')}</p>
                 </div>
             </div>
-            <form className="w-4/5 p-8" >
-                <label htmlFor="projectName"/>
-                    <p className="text-black">Nome do Projeto:</p>
-                    <input id="projectName" className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]" value={projectName} onChange={(event) => setProjectName(event.target.value)}/>
-                <label htmlFor="link" >
-                    <p className="text-black">Link da imagem do projeto:</p>
-                    <input id="link" className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]" type="url" value={imageUrl} onChange={(event) => setImageUrl(event.target.value)}/>
-                </label>
-                <div className="flex flex-row w-full gap-6 mb-2">
-                    <label htmlFor="startDate" className="w-2/4">
-                        <p className="text-black">Data Estimada de Inicio:</p>
-                        <input id="startDate" className="bg-[#C3DCE3] w-full px-4 py-2 text-[#757575]" type="date" value={startDate} onChange={(event) => setStartDate(event.target.value)} />
-                    </label>
-                    <label htmlFor="dueDate" className="w-2/4">
-                        <p className="text-black">Data Estimada de Inicio:</p>
-                        <input id="dueDate" className="bg-[#C3DCE3] w-full px-4 py-2 text-[#757575]"  type="date" value={dueDate} onChange={(event) => setDueDate(event.target.value)} />
-                    </label>
+            <form onSubmit={submitForm} className="w-4/5 p-8" >
+                <label 
+                    htmlFor="projectName"
+                    className="text-black"
+                >Nome do Projeto:</label>
+                <input 
+                    id="projectName"
+                    name="projectName"
+                    value={form.projectName}
+                    placeholder="Nome do Projeto"
+                    type="text"
+                    onChange={onChange}
+                    className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"
+                />
+
+                <label 
+                    htmlFor="link"
+                    className="text-black"
+                >Link da imagem do projeto:</label>
+                <input 
+                    id="link"
+                    name="link"
+                    value={form.link}
+                    placeholder="https://picsum.photos/200/200"
+                    type="url"
+                    onChange={onChange}
+                    className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]" 
+                />
+
+                <div className="flex flex-row w-full gap-6 mb-2" >
+                    <label 
+                        htmlFor="startDate"
+                        className="w-2/4 text-black"
+                    >Data Estimada de Inicio:</label>
+                    <input 
+                        id="startDate"
+                        name="startDate"
+                        value={form.startDate}
+                        type="date"
+                        onChange={onChange}
+                        className="bg-[#C3DCE3] w-full px-4 py-2 text-[#757575]"
+                    />
+                    <label 
+                        htmlFor="dueDate" 
+                        className="w-2/4 text-black"
+                    >Data Estimada de Término:</label>
+                    <input 
+                        id="dueDate"
+                        name="dueDate"
+                        value={form.dueDate}
+                        type="date"
+                        onChange={onChange}
+                        className="bg-[#C3DCE3] w-full px-4 py-2 text-[#757575]"
+                    />
                 </div>
-                <label htmlFor="summary">
-                    <p className="text-black">Resumo:</p>
-                    <input id="summary" className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"  value={summary} onChange={(event) => setSummary(event.target.value)}/>
-                </label>
-                <label htmlFor="desiredOutcome">
-                    <p className="text-black">Objetivo do projeto:</p>
-                    <input id="desiredOutcome" className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"  value={desiredOutcome} onChange={(event) => setDesiredOutcome(event.target.value)}/>
-                </label>
-                <label htmlFor="beneficts">
-                    <p className="text-black">Benefícios em participar do projeto:</p>
-                    <input id="beneficts" className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"  value={beneficts} onChange={(event) => setBeneficts(event.target.value)}/>
-                </label>
-                <label htmlFor="schedule">
-                    <p className="text-black">Agenda:</p>
-                    <input id="schedule" className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"  value={schedule} onChange={(event) => setSchedule(event.target.value)}/>
-                </label>
-                <label htmlFor="registrationDueDate">
-                    <p className="text-black">Data Limite de Inscriçāo:</p>
-                    <input id="registrationDueDate" className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"  type="date" value={registrationDueDate} onChange={(event) => setRegistrationDueDate(event.target.value)} />
-                </label>
+
+                <label 
+                    htmlFor="summary"
+                    className="text-black"
+                >Resumo:</label>
+                <input 
+                    id="summary"
+                    name="summary"
+                    value={form.summary}
+                    placeholder="Descreva brevemente seu projeto"
+                    type="text"
+                    onChange={onChange}
+                    className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]" 
+                />
+
+                <label 
+                    htmlFor="desiredOutcome"
+                    className="text-black"
+                >Objetivo do projeto:</label>
+                <input 
+                    id="desiredOutcome"
+                    name="desiredOutcome"
+                    value={form.desiredOutcome}
+                    type="text"
+                    onChange={onChange}
+                    className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]" 
+                />
+
+                <label 
+                    htmlFor="beneficts"
+                    className="text-black"
+                >Benefícios em participar do projeto:</label>
+                <input 
+                    id="beneficts"
+                    name="beneficts"
+                    value={form.beneficts}
+                    type="text"
+                    onChange={onChange}
+                    className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]" 
+                />
+
+                <label 
+                    htmlFor="schedule"
+                    className="text-black"
+                >Agenda:</label>
+                <input 
+                    id="schedule"
+                    name="schedule"
+                    value={form.schedule}
+                    type="text"
+                    onChange={onChange}
+                    className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]" 
+                />
+
+                <label 
+                    htmlFor="registrationDueDate"
+                    className="text-black"
+                >Data Limite de Inscriçāo:</label>
+                <input 
+                    id="registrationDueDate"
+                    name="registrationDueDate"
+                    value={form.registrationDueDate}
+                    type="date"
+                    onChange={onChange}
+                    className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]" 
+                />
+
                 <fieldset className="flex flex-wrap" >
                     <legend className="text-black">Escolha as linguagens que serão utilizadas:</legend>
                     {languageList.map((id)=>{
                         return(
-                            <div className="w-2/4" key={id}>
-                            <input className="bg-[#C3DCE3]" type="checkbox" id={id} name="language" value={id} onClick={checked ? () => removeLanguage(id) : () => addLanguage(id)}/>
-                            <label htmlFor={id} className="text-black" for={id}>{id}</label>
+                            <div key={id} className="w-2/4" >
+                                <input 
+                                    id={id}
+                                    value={id}
+                                    name="language"
+                                    type="checkbox"
+                                    onClick={ checked ? () => removeLanguage(id) : () => addLanguage(id) }
+                                    className="bg-[#C3DCE3]"
+                                />
+                                <label 
+                                    htmlFor={id} 
+                                    className="text-black"
+                                >{id}</label>
                             </div>
                         )
                     })}
                     <div className="w-2/4 mb-2">
-                        <input type="checkbox" id="other" name="language" value="other" onClick={checked ? () => removeLanguage(otherLanguage) : () => addLanguage(otherLanguage)} />
-                        <label htmlFor="other" className="text-black" for="other">Other</label>
-                        <input className="bg-[#C3DCE3] px-1" type="text" id="other" name="other" value={otherLanguage} onChange={(event) => setOtherLanguadge(event.target.value)} />
+                        <input 
+                            id="other"
+                            value="other"
+                            name="language"
+                            type="checkbox"
+                            onClick={ checked ? () => removeLanguage(otherLanguage) : () => addLanguage(otherLanguage) }
+                        />
+                        <label 
+                            htmlFor="otherLanguage"
+                            className="text-black"
+                        >Other</label>
+                        <input 
+                            id="otherLanguage"
+                            value={form.otherLanguage}
+                            name="otherLanguage"
+                            type="text"
+                            onChange={onChange}
+                            className="bg-[#C3DCE3] px-1"
+                        />
                     </div>
                 </fieldset>
             </form>
