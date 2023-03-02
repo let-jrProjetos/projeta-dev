@@ -18,7 +18,6 @@ export default function ProjectForm () {
     }
 
     const [languages, setLanguages] = useState([])
-    // const [otherLanguage, setOtherLanguadge] = useState("")
     const [checked, setChecked] = useState(false)
 
     const languageList = [ "JavaScript", "Python", "HTML", "CSS", "C#", "TypeScript", "GO"]
@@ -38,6 +37,7 @@ export default function ProjectForm () {
 
     const submitForm = (event) => {
         event.preventDefault()
+        console.log(form)
     }
 
     return(
@@ -69,6 +69,7 @@ export default function ProjectForm () {
                     type="text"
                     onChange={onChange}
                     className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"
+                    required
                 />
 
                 <label 
@@ -82,7 +83,8 @@ export default function ProjectForm () {
                     placeholder="https://picsum.photos/200/200"
                     type="url"
                     onChange={onChange}
-                    className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]" 
+                    className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"
+                    required
                 />
 
                 <div className="flex flex-row w-full gap-6 mb-2" >
@@ -97,6 +99,7 @@ export default function ProjectForm () {
                         type="date"
                         onChange={onChange}
                         className="bg-[#C3DCE3] w-full px-4 py-2 text-[#757575]"
+                        required
                     />
                     <label 
                         htmlFor="dueDate" 
@@ -109,6 +112,7 @@ export default function ProjectForm () {
                         type="date"
                         onChange={onChange}
                         className="bg-[#C3DCE3] w-full px-4 py-2 text-[#757575]"
+                        required
                     />
                 </div>
 
@@ -123,7 +127,8 @@ export default function ProjectForm () {
                     placeholder="Descreva brevemente seu projeto"
                     type="text"
                     onChange={onChange}
-                    className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]" 
+                    className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"
+                    required
                 />
 
                 <label 
@@ -136,7 +141,8 @@ export default function ProjectForm () {
                     value={form.desiredOutcome}
                     type="text"
                     onChange={onChange}
-                    className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]" 
+                    className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"
+                    required
                 />
 
                 <label 
@@ -149,7 +155,8 @@ export default function ProjectForm () {
                     value={form.beneficts}
                     type="text"
                     onChange={onChange}
-                    className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]" 
+                    className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"
+                    required
                 />
 
                 <label 
@@ -162,7 +169,8 @@ export default function ProjectForm () {
                     value={form.schedule}
                     type="text"
                     onChange={onChange}
-                    className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]" 
+                    className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"
+                    required
                 />
 
                 <label 
@@ -175,10 +183,11 @@ export default function ProjectForm () {
                     value={form.registrationDueDate}
                     type="date"
                     onChange={onChange}
-                    className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]" 
+                    className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"
+                    required 
                 />
 
-                <fieldset className="flex flex-wrap" >
+                <fieldset className="flex flex-wrap">
                     <legend className="text-black">Escolha as linguagens que serão utilizadas:</legend>
                     {languageList.map((id)=>{
                         return(
@@ -220,8 +229,9 @@ export default function ProjectForm () {
                         />
                     </div>
                 </fieldset>
+                <button className="bg-[#2B788B] w-2/6 mb-2 px-4 py-2 text-white">Publicar!</button>
             </form>
-            <button className="bg-[#2B788B] w-2/6 mb-2 px-4 py-2 text-white" type="submit">Publicar!</button>
+            
         </div>
 
     )
