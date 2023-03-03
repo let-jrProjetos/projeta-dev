@@ -18,7 +18,7 @@ export default function ProjectForm () {
     }
 
     const [languages, setLanguages] = useState([])
-    const languageList = [ "JavaScript", "Python", "HTML", "CSS", "C#", "TypeScript", "GO"]
+    const languageList = [ "JavaScript", "Python", "HTML", "CSS", "C#", "TypeScript"]
 
     const changeLanguageList = (language) => {
         if(languages.includes(language)){
@@ -41,9 +41,9 @@ export default function ProjectForm () {
     return(
         <div className="bg-[#F6F5F4] flex flex-col items-center py-12">
             <header className="h-20 text-black">Cabeçalho</header>
-            <div className="bg-[#FFFFFF] rounded-xl px-12 py-8 flex flex-row items-center gap-x-8">
+            <div className="bg-[#FFFFFF] min-w-min rounded-xl m-10 px-12 py-12 flex flex-row flex-wrap justify-center gap-8">
                 <img className="rounded-full" src={ form.link === "" ? projectExemple.link : form.link } alt="Capa do Projeto"/>
-                <div className="text-black">
+                <div className="text-black self-center">
                     <p>{ form.projectName === "" ? projectExemple.projectName : form.projectName }</p>
                     <p>{ form.startDate } / { form.dueDate}</p>
                     <p>{ form.summary === "" ? projectExemple.summary : form.summary }</p>
@@ -188,7 +188,7 @@ export default function ProjectForm () {
                     <legend className="text-black">Escolha as linguagens que serão utilizadas:</legend>
                     {languageList.map((language)=>{
                         return(
-                            <div key={language} className="w-2/4" >
+                            <div key={language} className="w-2/4 flex flex-row gap-1" >
                                 <input 
                                     id={language}
                                     name="language"
@@ -204,7 +204,8 @@ export default function ProjectForm () {
                             </div>
                         )
                     })}
-                    <div className="w-2/4 mb-2">
+                </fieldset>
+                <div className="w-2/4 mb-2">
                         <input 
                             id="other"
                             name="other"
@@ -222,13 +223,14 @@ export default function ProjectForm () {
                             value={form.otherLanguage}
                             type="text"
                             onChange={onChange}
-                            className="bg-[#C3DCE3] px-1"
+                            className="bg-[#C3DCE3] w-32 mr-8 px-1 text-black"
                         />
                     </div>
-                </fieldset>
-                <button className="bg-[#2B788B] w-2/6 mb-2 px-4 py-2 text-white">Publicar!</button>
             </form>
-            
+            <button 
+                type="submit"
+                onClick={(event) => submitForm(event)}
+                className="bg-[#2B788B] max-w-3/6 px-4 py-2 text-white">Publicar!</button>
         </div>
 
     )
