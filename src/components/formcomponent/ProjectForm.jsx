@@ -18,7 +18,14 @@ export default function ProjectForm () {
     }
 
     const [languages, setLanguages] = useState([])
-    const languageList = [ "JavaScript", "Python", "HTML", "CSS", "C#", "TypeScript"]
+    const [languageOptions,setLanguageOptions] = useState([ "JavaScript", "Python", "HTML", "CSS", "C#", "TypeScript"])
+
+    const updateLanguageOptions = (language) => {
+        const newLanguageOptions = [...languageOptions]
+        newLanguageOptions.push(language)
+        setLanguageOptions(newLanguageOptions)
+        form.otherLanguage = ""
+    }
 
     const changeLanguageList = (language) => {
         if(languages.includes(language)){
@@ -43,7 +50,7 @@ export default function ProjectForm () {
             <header className="font-Dela text-black h-20">Cabeçalho</header>
             <div className="bg-[#FFFFFF] font-Montserrat min-w-min rounded-xl m-10 px-12 py-12 flex flex-row flex-wrap justify-center gap-8">
                 <img className="rounded-full" src={ form.link === "" ? projectExemple.link : form.link } alt="Capa do Projeto"/>
-                <div className="text-black self-center">
+                <div className="text-black self-center ">
                     <p className="font-Dela">{ form.projectName === "" ? projectExemple.projectName : form.projectName }</p>
                     <p>{ form.startDate === "" ? "" : `${form.startDate} / ` }{ form.dueDate }</p>
                     <p>{ form.summary === "" ? projectExemple.summary : form.summary }</p>
@@ -186,7 +193,7 @@ export default function ProjectForm () {
 
                 <fieldset className="flex flex-wrap">
                     <legend className="text-black">Escolha as linguagens que serão utilizadas:</legend>
-                    {languageList.map((language)=>{
+                    {languageOptions.map((language)=>{
                         return(
                             <div key={language} className="w-2/4 flex flex-row gap-1" >
                                 <input 
@@ -205,33 +212,37 @@ export default function ProjectForm () {
                         )
                     })}
                 </fieldset>
-                <div className="w-2/4 mb-2">
-                        <input 
-                            id="other"
-                            name="other"
-                            value="other"
-                            type="checkbox"
-                            onClick={ () => changeLanguageList(form.otherLanguage) }
-                        />
+                <div className="flex w-2/4 mb-2">
                         <label 
                             htmlFor="otherLanguage"
-                            className="text-black"
-                        >Other: </label>
+                            className="text-black mr-1"
+                        >Outra: </label>
                         <input 
                             id="otherLanguage"
                             name="otherLanguage"
                             value={form.otherLanguage}
                             type="text"
                             onChange={onChange}
-                            className="bg-[#C3DCE3] w-32 mr-8 px-1 text-black"
+                            className="bg-[#C3DCE3] w-32 mr-1 px-1 text-black"
                         />
+                        <button 
+                            id="other"
+                            name="other"
+                            value="other"
+                            type="button"
+                            onClick={ () => updateLanguageOptions(form.otherLanguage) }
+                            className="bg-[#C3DCE3] border-2 border-[#2B788B] max-w-3/6 px-2 py-1 text-black"
+                        >Adicionar</button>
                     </div>
+                    <div className="flex justify-center mt-8" >
+                        <button
+                        type="submit"
+                        className="bg-[#2B788B] max-w-3/6 px-4 py-2 text-white "
+                        >Publicar!</button>
+                    </div>
+                 
             </form>
-            <button 
-                type="submit"
-                onClick={(event) => submitForm(event)}
-                className="bg-[#2B788B] max-w-3/6 px-4 py-2 text-white">Publicar!</button>
-        </div>
+              </div>
 
     )
 }
