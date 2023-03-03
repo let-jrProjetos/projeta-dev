@@ -40,12 +40,12 @@ export default function ProjectForm () {
 
     return(
         <div className="bg-[#F6F5F4] flex flex-col items-center py-12">
-            <header className="h-20 text-black">Cabeçalho</header>
-            <div className="bg-[#FFFFFF] min-w-min rounded-xl m-10 px-12 py-12 flex flex-row flex-wrap justify-center gap-8">
+            <header className="font-Dela text-black h-20">Cabeçalho</header>
+            <div className="bg-[#FFFFFF] font-Montserrat min-w-min rounded-xl m-10 px-12 py-12 flex flex-row flex-wrap justify-center gap-8">
                 <img className="rounded-full" src={ form.link === "" ? projectExemple.link : form.link } alt="Capa do Projeto"/>
                 <div className="text-black self-center">
-                    <p>{ form.projectName === "" ? projectExemple.projectName : form.projectName }</p>
-                    <p>{ form.startDate } / { form.dueDate}</p>
+                    <p className="font-Dela">{ form.projectName === "" ? projectExemple.projectName : form.projectName }</p>
+                    <p>{ form.startDate === "" ? "" : `${form.startDate} / ` }{ form.dueDate }</p>
                     <p>{ form.summary === "" ? projectExemple.summary : form.summary }</p>
                     <p>{ form.desiredOutcome === "" ? projectExemple.desiredOutcome : form.desiredOutcome}</p>
                     <p>{ form.beneficts === "" ? projectExemple.beneficts : form.beneficts}</p>
@@ -54,7 +54,7 @@ export default function ProjectForm () {
                     <p>{languages.join(', ')}</p>
                 </div>
             </div>
-            <form onSubmit={submitForm} className="w-4/5 p-8" >
+            <form onSubmit={submitForm} className="font-Montserrat w-4/5 p-8" >
                 <label 
                     htmlFor="projectName"
                     className="text-black"
