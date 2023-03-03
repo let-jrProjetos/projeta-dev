@@ -6,34 +6,32 @@ export default function ProjectForm () {
 
     const projectExemple = 
     { 
-        projectName:"Nome do Projeto",
+        projectName:"NOME DO PROJETO",
         link:"https://picsum.photos/200/200",
-        startDate:"Descreva brevemente seu projeto",
+        startDate:"",
         dueDate:"",
-        summary:"",
+        summary:"Descreva brevemente seu projeto",
         desiredOutcome:"Resultado esperado",
-        beneficts:"Exemplo: Participando do projeto voce irá desenvolver tanto suas hard skills quanto as softs.",
-        schedule:"Exemplo: Todas as Segundas, Quartas e Sextas-feiras às 18:00",
+        beneficts:"| Participando do projeto voce irá desenvolver tanto suas hard skills quanto as softs |",
+        schedule:"~ Todas as Segundas, Quartas e Sextas-feiras às 18:00 ~",
         registrationDueDate:""
     }
 
     const [languages, setLanguages] = useState([])
-    const [checked, setChecked] = useState(false)
-
     const languageList = [ "JavaScript", "Python", "HTML", "CSS", "C#", "TypeScript", "GO"]
 
-    const addLanguage = (language) => {
-        const languageList = [...languages, language]
-        setLanguages(languageList)
-        setChecked(true)
+    const changeLanguageList = (language) => {
+        if(languages.includes(language)){
+            const newLanguageList = [...languages]
+            const index = newLanguageList.indexOf(language)
+            newLanguageList.splice(index,1)
+            setLanguages(newLanguageList)
+        }else{
+            const newLanguageList = [...languages]
+            newLanguageList.push(language)
+            setLanguages(newLanguageList)
+        }
     }
-
-    const removeLanguage = () => {
-        const languageList = [...languages]
-        languageList.pop()
-        setLanguages(languageList)
-        setChecked(false)
-    } 
 
     const submitForm = (event) => {
         event.preventDefault()
@@ -44,15 +42,15 @@ export default function ProjectForm () {
         <div className="bg-[#F6F5F4] flex flex-col items-center py-12">
             <header className="h-20 text-black">Cabeçalho</header>
             <div className="bg-[#FFFFFF] rounded-xl px-12 py-8 flex flex-row items-center gap-x-8">
-                <img className="rounded-full" src={projectExemple.link} alt="Capa do Projeto"/>
+                <img className="rounded-full" src={ form.link === "" ? projectExemple.link : form.link } alt="Capa do Projeto"/>
                 <div className="text-black">
-                    <p>{projectExemple.projectName}</p>
-                    <p>{projectExemple.startDate}/{projectExemple.dueDate}</p>
-                    <p>{projectExemple.summary}</p>
-                    <p>{projectExemple.desiredOutcome}</p>
-                    <p>{projectExemple.beneficts}</p>
-                    <p>{projectExemple.schedule}</p>
-                    <p>Data limite de inscriçāo: {projectExemple.registrationDueDate}</p>
+                    <p>{ form.projectName === "" ? projectExemple.projectName : form.projectName }</p>
+                    <p>{ form.startDate } / { form.dueDate}</p>
+                    <p>{ form.summary === "" ? projectExemple.summary : form.summary }</p>
+                    <p>{ form.desiredOutcome === "" ? projectExemple.desiredOutcome : form.desiredOutcome}</p>
+                    <p>{ form.beneficts === "" ? projectExemple.beneficts : form.beneficts}</p>
+                    <p>{ form.schedule === "" ? projectExemple.schedule : form.schedule}</p>
+                    <p>Data limite de inscriçāo: { form.registrationDueDate }</p>
                     <p>{languages.join(', ')}</p>
                 </div>
             </div>
@@ -65,7 +63,6 @@ export default function ProjectForm () {
                     id="projectName"
                     name="projectName"
                     value={form.projectName}
-                    placeholder="Nome do Projeto"
                     type="text"
                     onChange={onChange}
                     className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"
@@ -80,18 +77,17 @@ export default function ProjectForm () {
                     id="link"
                     name="link"
                     value={form.link}
-                    placeholder="https://picsum.photos/200/200"
                     type="url"
                     onChange={onChange}
                     className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"
                     required
                 />
 
-                <div className="flex flex-row w-full gap-6 mb-2" >
+                <div className="flex flex-row flex-wrap w-full mb-2" >
                     <label 
                         htmlFor="startDate"
                         className="w-2/4 text-black"
-                    >Data Estimada de Inicio:</label>
+                    >Data de Inicio:</label>
                     <input 
                         id="startDate"
                         name="startDate"
@@ -101,10 +97,12 @@ export default function ProjectForm () {
                         className="bg-[#C3DCE3] w-full px-4 py-2 text-[#757575]"
                         required
                     />
-                    <label 
+                </div>
+                <div className="flex flex-row flex-wrap w-full mb-2" >
+                <label 
                         htmlFor="dueDate" 
                         className="w-2/4 text-black"
-                    >Data Estimada de Término:</label>
+                    >Data de Término:</label>
                     <input 
                         id="dueDate"
                         name="dueDate"
@@ -124,7 +122,6 @@ export default function ProjectForm () {
                     id="summary"
                     name="summary"
                     value={form.summary}
-                    placeholder="Descreva brevemente seu projeto"
                     type="text"
                     onChange={onChange}
                     className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"
@@ -189,40 +186,40 @@ export default function ProjectForm () {
 
                 <fieldset className="flex flex-wrap">
                     <legend className="text-black">Escolha as linguagens que serão utilizadas:</legend>
-                    {languageList.map((id)=>{
+                    {languageList.map((language)=>{
                         return(
-                            <div key={id} className="w-2/4" >
+                            <div key={language} className="w-2/4" >
                                 <input 
-                                    id={id}
-                                    value={id}
+                                    id={language}
                                     name="language"
+                                    value={language}
                                     type="checkbox"
-                                    onClick={ checked ? () => removeLanguage(id) : () => addLanguage(id) }
+                                    onClick={ () => changeLanguageList(language) }
                                     className="bg-[#C3DCE3]"
                                 />
                                 <label 
-                                    htmlFor={id} 
+                                    htmlFor={language} 
                                     className="text-black"
-                                >{id}</label>
+                                >{language}</label>
                             </div>
                         )
                     })}
                     <div className="w-2/4 mb-2">
                         <input 
                             id="other"
+                            name="other"
                             value="other"
-                            name="language"
                             type="checkbox"
-                            onClick={ checked ? () => removeLanguage(otherLanguage) : () => addLanguage(otherLanguage) }
+                            onClick={ () => changeLanguageList(form.otherLanguage) }
                         />
                         <label 
                             htmlFor="otherLanguage"
                             className="text-black"
-                        >Other</label>
+                        >Other: </label>
                         <input 
                             id="otherLanguage"
-                            value={form.otherLanguage}
                             name="otherLanguage"
+                            value={form.otherLanguage}
                             type="text"
                             onChange={onChange}
                             className="bg-[#C3DCE3] px-1"
