@@ -240,9 +240,7 @@ export default function ProjectForm () {
                         className="bg-[#2B788B] max-w-3/6 px-4 py-2 text-white "
                         >Publicar!</button>
                     </div>
-                 
             </form>
-              </div>
-
+        </div>
     )
 }
