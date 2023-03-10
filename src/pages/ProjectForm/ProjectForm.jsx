@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useForm } from "../../hooks/useForm";
 
-export default function ProjectForm () {
+const ProjectForm = () => {
     const { form, onChange } = useForm({ projectName:"", link:"", startDate:"", dueDate:"", summary:"", desiredOutcome:"", beneficts:"", schedule:"", registrationDueDate:"", otherLanguage:"" })
 
     const projectExemple = 
@@ -244,3 +244,4 @@ export default function ProjectForm () {
         </div>
     )
 }
+export default ProjectForm;
