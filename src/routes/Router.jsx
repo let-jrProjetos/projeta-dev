@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AboutUs from "../components/AboutUs";
 import HomePage from "../pages/Home";
+import DashBoard from "../pages/dashBoard/Dashboard";
 
 export const Router = () => {
   return (
@@ -8,6 +9,7 @@ export const Router = () => {
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="sobreNos" element={<AboutUs />} />
+        <Route path="dashBoard" element={<DashBoard />} />
       </Routes>
     </BrowserRouter>
   );
