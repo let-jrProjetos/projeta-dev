@@ -1,6 +1,8 @@
 import React from "react";
 
-export function ProjectCard() {
+export function ProjectCard({ project }) {
+  console.log(project);
+  console.log("michele");
   return (
     <>
       <div className="card w-96 bg-base-100 shadow-xl">
@@ -12,13 +14,13 @@ export function ProjectCard() {
         </figure>
         <div className="card-body">
           <h2 className="card-title">
-            Shoes!
-            <div className="badge badge-secondary">NEW</div>
+            {project.tittle}
+            <div className="badge badge-secondary"></div>
           </h2>
           <p>If a dog chews shoes whose shoes does he choose?</p>
           <div className="card-actions justify-end">
-            <div className="badge badge-outline">Fashion</div>
-            <div className="badge badge-outline">Products</div>
+            <div className="badge badge-outline">michelle</div>
+            <div className="badge badge-outline">outros</div>
           </div>
         </div>
       </div>

@@ -1,13 +1,15 @@
 import React from "react";
-import project from "../../../db";
-import ProjectCard from "../../components/dashBoard/ProjectCard";
+import project from "../../../db.json";
+import { ProjectCard } from "../../components/dashBoard/projectCard";
+
 export default function DashBoard() {
+  console.log(project);
   return (
-    <>
-      {project.map((project) => {
-        <ProjectCard />;
-      })}
-      <div>DashBoard</div>
-    </>
+    <div>
+      {project.project.map((elementos, index) => (
+        // <div>{elementos.image}</div>
+        <ProjectCard project={project} key={index} />
+      ))}
+    </div>
   );
 }
