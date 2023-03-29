@@ -1,39 +1,39 @@
 {
   "project": [
     {
-      "image": "image.do.projeto",
+      "image": "./src/assets/img/img_dashBoard/dashBoard.png",
       "tittle:": "Título do Projeto",
-      "languages": "languages add",
+      "languages": "Languages add",
       "front": true,
       "back": false,
-      "descriptionOne": "description here",
+      "descriptionOne": "Título do Projeto",
       "descriptionTwo": "description here"
     },
     {
-      "image": "image.do.projeto",
+      "image": "./src/assets/img/img_dashBoard/dashBoard.png",
       "tittle:": "Título do Projeto",
-      "languages": "languages add",
+      "languages": "Languages add",
       "front": true,
       "back": false,
-      "descriptionOne": "description here",
+      "descriptionOne": "Título do Projeto",
+      "descriptionTwo": "Description here"
+    },
+    {
+      "image": "./src/assets/img/img_dashBoard/dashBoard.png",
+      "tittle:": "Título do Projeto",
+      "languages": "Languages add",
+      "front": true,
+      "back": false,
+      "descriptionOne": "Título do Projeto",
       "descriptionTwo": "description here"
     },
     {
-      "image": "image.do.projeto",
+      "image": "./src/assets/img/img_dashBoard/dashBoard.png",
       "tittle:": "Título do Projeto",
-      "languages": "languages add",
+      "languages": "Languages add",
       "front": true,
       "back": false,
-      "descriptionOne": "description here",
-      "descriptionTwo": "description here"
-    },
-    {
-      "image": "image.do.projeto",
-      "tittle:": "Título do Projeto",
-      "languages": "languages add",
-      "front": true,
-      "back": false,
-      "descriptionOne": "description here",
+      "descriptionOne": "Título do Projeto",
       "descriptionTwo": "description here"
     }
   ]

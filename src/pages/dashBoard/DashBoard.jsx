@@ -5,10 +5,11 @@ import { ProjectCard } from "../../components/dashBoard/projectCard";
 export default function DashBoard() {
   console.log("michelle");
   return (
-    <div>
+    <div class="flex flex-wrap md:flex-wrap justify-center items-center gap-2 bg-stone-300	p-4">
       {project.project.map((elementos, index) => (
         <ProjectCard elementos={elementos} key={index} />
       ))}
     </div>
   );
 }
+//flex flex-nowrap
