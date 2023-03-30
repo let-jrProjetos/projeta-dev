@@ -4,7 +4,7 @@ export function ProjectCard({ elementos }) {
   return (
     <>
       <div className="card w-96 shadow-xl  bg-white p-2 ">
-        <figure>
+        <figure className="h-45 w-50">
           <img src={elementos.image} alt={elementos.tittle} />
         </figure>
         <div className="flex justify-center  ">
