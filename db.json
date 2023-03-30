@@ -1,7 +1,7 @@
 {
   "project": [
     {
-      "image": "./src/assets/img/img_dashBoard/dashBoard.png",
+      "image": "./src/assets/img/img_dashBoard/calculator.png",
       "tittle:": "Caluladora Simples",
       "languages": "JavaScript",
       "front": true,
@@ -12,7 +12,7 @@
       "prazo": "10/01/2023 - 20/06/2023"
     },
     {
-      "image": "./src/assets/img/img_dashBoard/dashBoard.png",
+      "image": "./src/assets/img/img_dashBoard/calendar.png",
       "tittle:": "Agenda Online",
       "languages": "JavaScript",
       "front": true,
@@ -23,7 +23,7 @@
       "prazo": "10/01/2023 - 20/06/2023"
     },
     {
-      "image": "./src/assets/img/img_dashBoard/dashBoard.png",
+      "image": "./src/assets/img/img_dashBoard/converter-medida.png",
       "tittle:": "Conversor de medidas",
       "languages": "C++",
       "front": true,
@@ -35,7 +35,7 @@
       "prazo": "10/01/2023 - 20/06/2023"
     },
     {
-      "image": "./src/assets/img/img_dashBoard/dashBoard.png",
+      "image": "./src/assets/img/img_dashBoard/chatOnline.png",
       "tittle:": "App de conversação",
       "languages": "Python",
       "front": true,
@@ -46,7 +46,7 @@
       "prazo": "10/01/2023 - 20/06/2023"
     },
     {
-      "image": "./src/assets/img/img_dashBoard/dashBoard.png",
+      "image": "./src/assets/img/img_dashBoard/calculator.png",
       "tittle:": "Caluladora Simples",
       "languages": "JavaScript",
       "front": true,
@@ -57,7 +57,7 @@
       "prazo": "10/01/2023 - 20/06/2023"
     },
     {
-      "image": "./src/assets/img/img_dashBoard/dashBoard.png",
+      "image": "./src/assets/img/img_dashBoard/calendar.png",
       "tittle:": "Agenda Online",
       "languages": "JavaScript",
       "front": true,
@@ -68,7 +68,7 @@
       "prazo": "10/01/2023 - 20/06/2023"
     },
     {
-      "image": "./src/assets/img/img_dashBoard/dashBoard.png",
+      "image": "./src/assets/img/img_dashBoard/converter-medida.png",
       "tittle:": "Conversor de medidas",
       "languages": "C++",
       "front": true,
@@ -80,7 +80,7 @@
       "prazo": "10/01/2023 - 20/06/2023"
     },
     {
-      "image": "./src/assets/img/img_dashBoard/dashBoard.png",
+      "image": "./src/assets/img/img_dashBoard/chatOnline.png",
       "tittle:": "App de conversação",
       "languages": "Python",
       "front": true,
