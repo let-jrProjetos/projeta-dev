@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         grey: {
           123: "#F6F5F4",
+          header: "#585858"
         },
       },
     },

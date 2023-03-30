@@ -9,17 +9,21 @@ export const Header = () => {
         <FaBars />
       </div>
       {!isLogedIn ? (
-        <div className="flex pl-3 sm:pl-[10rem] grow shrink-1 justify-start sm:justify-center lg:justify-start">
+        <div className="flex pl-3 sm:pl-[10rem] grow shrink-1 justify-start sm:justify-center lg:justify-start items-center">
           <div>Nome Logo</div>
+          <div className="hidden text-grey-header font-Montserrat text-sm lg:flex lg:justify-start lg:p-2 g-4">
+            <div className="w-1px border-l-2 h-4"></div>
+            <div>Home</div>
+            <div>About Us</div>
+            <div>Faq</div>
+          </div>
         </div>
       ) : (
         <div className="flex pl-3 sm:pl-[5rem] grow shrink-1 justify-start sm:justify-center">
           <div>Nome Logo</div>
         </div>
       )}
-      <div className="hidden lg:flex lg:justify-start">
-        <div>LLLLL</div>
-      </div>
+
       {isLogedIn ? (
         <div className="flex justify-space-between items-center gap-2">
           <img
