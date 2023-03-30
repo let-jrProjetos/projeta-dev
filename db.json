@@ -18,6 +18,51 @@
       "front": true,
       "back": true,
       "descriptionOne": "Agenda Online",
+      "descriptionTwo": "Uma agenda online com espaços para anotar compromissos. Com lembretes através de notificações via celular, SMS ou e-mail.",
+      "details": "Estilizacão: Chakra",
+      "prazo": "10/01/2023 - 20/06/2023"
+    },
+    {
+      "image": "./src/assets/img/img_dashBoard/dashBoard.png",
+      "tittle:": "Conversor de medidas",
+      "languages": "C++",
+      "front": true,
+      "back": true,
+      "sql": true,
+      "descriptionOne": "Conversor de medidas",
+      "descriptionTwo": "APP que permite a conversão de mais de 200 medidas. Simples e intuitivo para atender a todas as demandas. ",
+      "details": "",
+      "prazo": "10/01/2023 - 20/06/2023"
+    },
+    {
+      "image": "./src/assets/img/img_dashBoard/dashBoard.png",
+      "tittle:": "App de conversação",
+      "languages": "Python",
+      "front": true,
+      "back": true,
+      "descriptionOne": "App de conversação",
+      "descriptionTwo": "Desenvolvimento de um aplicaçao visando a conversação entre as pessoas, seja individualmente ou em grupos selecionados com temas pré-selecionados.",
+      "details": "",
+      "prazo": "10/01/2023 - 20/06/2023"
+    },
+    {
+      "image": "./src/assets/img/img_dashBoard/dashBoard.png",
+      "tittle:": "Caluladora Simples",
+      "languages": "JavaScript",
+      "front": true,
+      "back": true,
+      "descriptionOne": "Caluladora Simples",
+      "descriptionTwo": "Calculadora online simples, com estilização moderna de fácil entendimento dos usuários.",
+      "details": "Estilizacão: Styled-Components",
+      "prazo": "10/01/2023 - 20/06/2023"
+    },
+    {
+      "image": "./src/assets/img/img_dashBoard/dashBoard.png",
+      "tittle:": "Agenda Online",
+      "languages": "JavaScript",
+      "front": true,
+      "back": true,
+      "descriptionOne": "Agenda Online",
       "descriptionTwo": "Uma agenda online com espaços para anotar pequenos e grandes compromissos. Com lembretes de compromissos através de notificações via celular, SMS ou e-mail.",
       "details": "Estilizacão: Chakra",
       "prazo": "10/01/2023 - 20/06/2023"
