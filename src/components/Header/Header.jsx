@@ -1,32 +1,42 @@
 import { useState } from "react";
 import { FaArrowRight, FaBars, FaAngleDown } from "react-icons/fa";
-import { HamburguerIcon } from "./burguer/Burguer";
+import { useNavigate } from "react-router-dom";
+import { HamburguerMenu } from "./burguer/HamburguerMenu";
 import { ProfilePhoto } from "./profilePhoto/ProfilePhoto";
 
 export const Header = () => {
+  const navigate = useNavigate();
+
   const [isLogedIn, setIsLogedIn] = useState(true);
   const [user, setUser] = useState({ name: "Alex" });
+  const [isBurguerOpen, setIsBurguerOpen] = useState(false);
   return (
     <header className="w-full h-14 bg-[#F6F5F4] font-Dela text-black text-sm font-normal px-5 border-b-1">
       <div className="relative w-full h-full flex justify-between items-center">
-        <button
-          className="lg:hidden"
-          onClick={() => console.log("Apertou o hamburguinho")}
-        >
-          <HamburguerIcon />
+        <button className="lg:hidden" onClick={() => setIsBurguerOpen(true)}>
+          <FaBars />
         </button>
         {!isLogedIn ? (
           <div className="flex pl-3 sm:pl-[10rem] grow shrink-1 justify-start sm:justify-center lg:justify-start items-center">
             <div>NomeLogo</div>
             <div className="hidden gap-4 text-gray-header font-Montserrat text-sm lg:flex lg:justify-between lg:pl-4 lg:p-x-2 items-center">
               <div className="w-1px border-l-2 h-4"></div>
-              <div className="hover:text-black active:font-bold">
+              <div
+                className="hover:text-black active:font-bold"
+                onClick={() => goToHome(navigate)}
+              >
                 Página Inicial
               </div>
-              <div className="hover:text-black active:font-extrabold">
+              <div
+                className="hover:text-black active:font-extrabold"
+                onClick={() => goToAbotUs(navigate)}
+              >
                 Sobre nós
               </div>
-              <div className="hover:text-black active:font-bold">
+              <div
+                className="hover:text-black active:font-bold"
+                onClick={() => goToFaq(navigate)}
+              >
                 Perguntas Frequentes
               </div>
             </div>
@@ -36,11 +46,22 @@ export const Header = () => {
             <div>Nome Logo</div>
             <div className="hidden gap-6 text-gray-header font-Montserrat text-sm lg:flex lg:justify-between lg:pl-6 lg:p-x-2 items-center">
               <div className="w-1px border-l-2 h-4"></div>
-              <div className="hover:text-black active:font-bold">
+              <div
+                className="hover:text-black active:font-bold"
+                onClick={() => goToHome(navigate)}
+              >
                 Página Inicial
               </div>
-              <div className="hover:text-black active:font-bold">Sobre nós</div>
-              <div className="hover:text-black active:font-bold">
+              <div
+                className="hover:text-black active:font-bold"
+                onClick={() => goToAboutUs(navigate)}
+              >
+                Sobre nós
+              </div>
+              <div
+                className="hover:text-black active:font-bold"
+                onClick={() => goToFaq(navigate)}
+              >
                 Perguntas Frequentes
               </div>
             </div>
@@ -74,24 +95,11 @@ export const Header = () => {
           </div>
         )}
       </div>
-
-      <div className="absolute top-0 left-0 w-full h-full z-100 bg-gray-123 ">
-        <div className="w-full h-14 border-b-1 border-gray-header flex justify-between items-center px-5">
-          <span className="font-Montserrat font-semibold text-base text-gray-header">X</span>
-          <div> NomeLogo</div>
-        </div>
-        <div className="w-full h-full flex flex-col items-center justify-center font-Montserrat font-semibold text-base text-gray-text gap-y-6 pb-14">
-          <div className="hover:text-blue-green active:font-bold">
-            Página Inicial
-          </div>
-          <div className="hover:text-blue-green active:font-extrabold">
-            Sobre nós
-          </div>
-          <div className="hover:text-blue-green active:font-bold">
-            Perguntas Frequentes
-          </div>
-        </div>
-      </div>
+      {isBurguerOpen ? (
+        <HamburguerMenu setIsBurguerOpen={setIsBurguerOpen} />
+      ) : (
+        ""
+      )}
     </header>
   );
 };

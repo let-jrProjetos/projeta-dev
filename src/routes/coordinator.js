@@ -1,3 +1,9 @@
+// export const goToHome = (navigate) => {
+//     navigate(`/`)
+// }
 // export const goToAboutUs = (navigate) => {
-//   navigate(`/aboutUs`);
+//   navigate(`/sobreNos`);
+// };
+// export const goToFaq = (navigate) => {
+//   navigate(`/perguntasFrequentes`);
 // };
