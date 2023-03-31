@@ -16,6 +16,7 @@ export const Header = () => {
   const [user, setUser] = useState({ name: "Alex" });
   const [isBurguerOpen, setIsBurguerOpen] = useState(false);
   const [isSideBarMobile, setIsSideBarMobile] = useState(false);
+  const [isSideBarDesktop, setIsSideBarDesktop] = useState(false);
 
   return (
     <header className="w-full h-14 bg-[#F6F5F4] font-Dela text-black text-sm font-normal px-5 border-b-1">
@@ -30,9 +31,9 @@ export const Header = () => {
         )}
         {isLogedIn ? (
           <RightMenuUser
-            navigate={navigate}
             user={user}
-            setIsSideBarMobile={setIsSideBarMobile}
+            setIsSideBar={setIsSideBarMobile}
+            setIsSideBarDesktop={setIsSideBarDesktop}
           />
         ) : (
           <RightMenuLogin navigate={navigate} />
@@ -53,8 +54,16 @@ export const Header = () => {
       ) : (
         ""
       )}
-
-      <SideBarDesktop />
+      {isSideBarDesktop ? (
+        <SideBarDesktop
+          navigate={navigate}
+          user={user}
+          setIsLogedIn={setIsLogedIn}
+          setIsSideBarDesktop={setIsSideBarDesktop}
+        />
+      ) : (
+        ""
+      )}
     </header>
   );
 };

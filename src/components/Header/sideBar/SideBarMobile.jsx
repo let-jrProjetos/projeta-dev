@@ -17,7 +17,7 @@ export const SideBarMobile = ({
 }) => {
   return (
     <div
-      className="absolute top-0 left-0 w-full h-screen bg-transparent"
+      className="absolute top-0 left-0 w-full h-screen bg-transparent lg:hidden"
       onClick={() => setSideBarMobile(false)}
     >
       <div className="z-100 absolute right-0 top-14 w-[4.5rem] h-4/6 bg-white rounded-2xl border-2 ">
