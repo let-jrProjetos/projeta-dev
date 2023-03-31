@@ -12,9 +12,10 @@ import { SideBarMobile } from "./sideBar/SideBarMobile";
 export const Header = () => {
   const navigate = useNavigate();
 
-  const [isLogedIn, setIsLogedIn] = useState(false);
-  const [user, setUser] = useState("Alex");
+  const [isLogedIn, setIsLogedIn] = useState(true);
+  const [user, setUser] = useState({ name: "Alex" });
   const [isBurguerOpen, setIsBurguerOpen] = useState(false);
+  const [isSideBarMobile, setIsSideBarMobile] = useState(false);
 
   return (
     <header className="w-full h-14 bg-[#F6F5F4] font-Dela text-black text-sm font-normal px-5 border-b-1">
@@ -28,7 +29,11 @@ export const Header = () => {
           <HorizontalMenuLogin navigate={navigate} />
         )}
         {isLogedIn ? (
-          <RightMenuUser navigate={navigate} user={user} />
+          <RightMenuUser
+            navigate={navigate}
+            user={user}
+            setIsSideBarMobile={setIsSideBarMobile}
+          />
         ) : (
           <RightMenuLogin navigate={navigate} />
         )}
@@ -38,8 +43,18 @@ export const Header = () => {
       ) : (
         ""
       )}
-      <SideBarMobile/>
-      <SideBarDesktop/>
+      {isSideBarMobile ? (
+        <SideBarMobile
+          navigate={navigate}
+          user={user}
+          setIsLogedIn={setIsLogedIn}
+          setSideBarMobile={setIsSideBarMobile}
+        />
+      ) : (
+        ""
+      )}
+
+      <SideBarDesktop />
     </header>
   );
 };
