@@ -3,12 +3,16 @@ import React from "react";
 export function ProjectCard({ elementos }) {
   return (
     <>
-      <div className="card w-96 shadow-xl  bg-white p-2 ">
-        <figure className="h-50 w-50">
-          <img src={elementos.image} alt={elementos.tittle} />
+      <div className="card w-96 shadow-xl   bg-white p-2  ">
+        <figure>
+          <img
+            className="h-36 w-52"
+            src={elementos.image}
+            alt={elementos.tittle}
+          />
         </figure>
         <div className="flex justify-center  ">
-          <p className="text-black font-bold text-2xl p-1 font-Dela">
+          <p className="text-black font-bold text-2xl p-1 font-Dela ">
             {elementos.descriptionOne}
           </p>
         </div>
@@ -19,7 +23,7 @@ export function ProjectCard({ elementos }) {
         </div>
 
         <div className="card-body">
-          <p className="text-black font-Montserrat">
+          <p className="text-black font-Montserrat h-36">
             {elementos.descriptionTwo}
           </p>
           <hr />
