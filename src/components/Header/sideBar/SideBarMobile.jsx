@@ -21,8 +21,8 @@ export const SideBarMobile = ({
       onClick={() => setSideBarMobile(false)}
     >
       <div className="z-100 absolute right-0 top-14 w-[4.5rem] h-4/6 bg-white rounded-2xl border-2 ">
-        <div className="h-full p-4 flex flex-col text-[#C4C4C4] text-lg justify-arround items-center gap-y-5">
-          <div className="text-black text-sm py-3">Logo</div>
+        <div className="h-full p-4 pb-6 flex flex-col text-[#C4C4C4] text-lg justify-between items-center">
+          <div className="text-black text-sm py-2">Logo</div>
           <button className="hover:text-[#C3DCE3] active:text-blue-green">
             <FaPager onClick={() => goToDashboard(navigate)} />
           </button>
