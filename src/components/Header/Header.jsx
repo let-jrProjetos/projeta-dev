@@ -6,6 +6,8 @@ import { HorizontalMenuLogin } from "./horizontalMenu/Login";
 import { HorizontalMenuUser } from "./horizontalMenu/User";
 import { RightMenuLogin } from "./rightMenu/Login";
 import { RightMenuUser } from "./rightMenu/User";
+import { SideBarDesktop } from "./sideBar/SideBarDesktop";
+import { SideBarMobile } from "./sideBar/SideBarMobile";
 
 export const Header = () => {
   const navigate = useNavigate();
@@ -36,6 +38,8 @@ export const Header = () => {
       ) : (
         ""
       )}
+      <SideBarMobile/>
+      <SideBarDesktop/>
     </header>
   );
 };
