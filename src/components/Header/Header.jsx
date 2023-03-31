@@ -32,7 +32,7 @@ export const Header = () => {
         {isLogedIn ? (
           <RightMenuUser
             user={user}
-            setIsSideBar={setIsSideBarMobile}
+            setIsSideBarMobile={setIsSideBarMobile}
             setIsSideBarDesktop={setIsSideBarDesktop}
           />
         ) : (

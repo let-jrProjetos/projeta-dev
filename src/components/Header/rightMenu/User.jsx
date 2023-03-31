@@ -7,7 +7,7 @@ export const RightMenuUser = ({
   setIsSideBarDesktop,
 }) => {
   const setSideBar = () => {
-    // setIsSideBarMobile(true);
+    setIsSideBarMobile(true);
     setIsSideBarDesktop(true);
   };
   return (

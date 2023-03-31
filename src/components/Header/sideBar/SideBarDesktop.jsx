@@ -20,11 +20,11 @@ export const SideBarDesktop = ({
       className="hidden absolute top-0 left-0 w-full h-screen bg-transparent lg:flex"
       onClick={() => setIsSideBarDesktop(false)}
     >
-      <div className="z-100 absolute right-36 top-14 w-48 h-4/6 bg-white rounded-2xl border-2 ">
-        <div className="h-full p-4 flex flex-col text-[#C4C4C4] text-xl justify-arround items-end gap-y-5 ">
+      <div className="z-100 absolute right-40 top-14 w-48 h-4/6 bg-white rounded-2xl border-2 ">
+        <div className="h-full p-4 pb-6 flex flex-col text-[#C4C4C4] text-xl justify-between items-end">
           <div className="text-black text-sm py-1">Logo</div>
           <button
-            className="flex items-center"
+            className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
             onClick={() => goToDashboard(navigate)}
           >
             <span className="font-Montserrat text-sm text-gray-header px-2">
@@ -33,7 +33,7 @@ export const SideBarDesktop = ({
             <FaPager />
           </button>
           <button
-            className="flex items-center"
+            className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
             onClick={() => goToProjects(navigate)}
           >
             <span className="font-Montserrat text-sm text-gray-header px-2">
@@ -42,7 +42,7 @@ export const SideBarDesktop = ({
             <FaFolderOpen />
           </button>
           <button
-            className="flex items-center"
+            className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
             onClick={() => goToProjectForm(navigate)}
           >
             <span className="font-Montserrat text-sm text-gray-header px-2">
@@ -51,7 +51,7 @@ export const SideBarDesktop = ({
             <FaFolderPlus />
           </button>
           <button
-            className="flex items-center"
+            className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
             onClick={() => goToMessages(navigate)}
           >
             <span className="font-Montserrat text-sm text-gray-header px-2">
@@ -59,10 +59,9 @@ export const SideBarDesktop = ({
             </span>
             <FaRegEnvelope />
           </button>
-
-          <div className="w-36 border-b-2 border-[#C4C4C4] py-1"></div>
+          <div className="w-36 border-b-2 border-[#C4C4C4] py-1 mr-1"></div>
           <button
-            className="flex items-center"
+            className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
             onClick={() => goToHelp(navigate)}
           >
             <span className="font-Montserrat text-sm text-gray-header px-2">
@@ -71,7 +70,7 @@ export const SideBarDesktop = ({
             <FaQuestionCircle />
           </button>
           <button
-            className="flex items-center"
+            className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
             onClick={() => goToSettings(navigate)}
           >
             <span className="font-Montserrat text-sm text-gray-header px-2">
@@ -79,10 +78,9 @@ export const SideBarDesktop = ({
             </span>
             <FaRegSun />
           </button>
-
           <ProfilePhoto user={user} />
           <button
-            className="flex items-center"
+            className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
             onClick={() => setIsLogedIn(false)}
           >
             <span className="font-Montserrat text-sm text-gray-header px-2">

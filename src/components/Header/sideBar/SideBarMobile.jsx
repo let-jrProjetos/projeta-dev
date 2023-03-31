@@ -21,17 +21,31 @@ export const SideBarMobile = ({
       onClick={() => setSideBarMobile(false)}
     >
       <div className="z-100 absolute right-0 top-14 w-[4.5rem] h-4/6 bg-white rounded-2xl border-2 ">
-        <div className="h-full p-4 flex flex-col text-[#C4C4C4] text-2xl justify-arround items-center gap-y-7 ">
-          <div className="text-black text-sm py-4">Logo</div>
-          <FaPager onClick={() => goToDashboard(navigate)} />
-          <FaFolderOpen onClick={() => goToProjects(navigate)} />
-          <FaFolderPlus onClick={() => goToProjectForm(navigate)} />
-          <FaRegEnvelope onClick={() => goToMessages(navigate)} />
+        <div className="h-full p-4 flex flex-col text-[#C4C4C4] text-lg justify-arround items-center gap-y-5">
+          <div className="text-black text-sm py-3">Logo</div>
+          <button className="hover:text-[#C3DCE3] active:text-blue-green">
+            <FaPager onClick={() => goToDashboard(navigate)} />
+          </button>
+          <button className="hover:text-[#C3DCE3] active:text-blue-green">
+            <FaFolderOpen onClick={() => goToProjects(navigate)} />
+          </button>
+          <button className="hover:text-[#C3DCE3] active:text-blue-green">
+            <FaFolderPlus onClick={() => goToProjectForm(navigate)} />
+          </button>
+          <button className="hover:text-[#C3DCE3] active:text-blue-green">
+            <FaRegEnvelope onClick={() => goToMessages(navigate)} />
+          </button>
           <div className="w-9 border-b-2 border-[#C4C4C4] py-1"></div>
-          <FaQuestionCircle onClick={() => goToHelp(navigate)} />
-          <FaRegSun onClick={() => goToSettings(navigate)} />
+          <button className="hover:text-[#C3DCE3] active:text-blue-green">
+            <FaQuestionCircle onClick={() => goToHelp(navigate)} />
+          </button>
+          <button className="hover:text-[#C3DCE3] active:text-blue-green">
+            <FaRegSun onClick={() => goToSettings(navigate)} />
+          </button>
           <ProfilePhoto user={user} />
-          <FaSignOutAlt onClick={() => setIsLogedIn(false)} />
+          <button className="hover:text-[#C3DCE3] active:text-blue-green">
+            <FaSignOutAlt onClick={() => setIsLogedIn(false)} />
+          </button>
         </div>
       </div>
     </div>
