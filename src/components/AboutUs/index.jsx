@@ -8,7 +8,7 @@ import nathalia from "../../assets/img/nathaliaBuchholz.jpg";
 
 export default function AboutUs() {
   return (
-    <div className="bg-grey-123  border-4 text-black	">
+    <div className="bg-gray-123  border-4 text-black	">
       <div className="flex flex-col	items-center gap-6  m-6 p-2 bg-white rounded-lg">
         <img
           className=" w-24 rounded-full"
