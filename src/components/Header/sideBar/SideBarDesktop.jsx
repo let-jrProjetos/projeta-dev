@@ -1,3 +1,3 @@
-export const SideBarMobile = () => {
+export const SideBarDesktop = () => {
   return <></>;
 };
