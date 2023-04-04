@@ -1,4 +1,4 @@
-import { useForm } from "../../hooks/useForm";
+import { useForm } from "../hooks/useForm";
 import { FaEnvelope, FaUser, FaLock } from "react-icons/fa";
 // FaRegEnvelope
 // FaRegUser
@@ -10,15 +10,17 @@ export const SingIn = () => {
     password: "",
     passwordConfirm: "",
   });
-
+  //onSubmit={submitFormSingIn}
   return (
-    <>
-      <h1>NOSSO NOME AQUI</h1>
+    <div className="flex flex-col justify-center items-center">
+      <div className="border-2 rounded-lg text-[#757575] m-3">
+        Logo Projeta Dev
+      </div>
 
       <form>
-        <label htmlFor="email"></label>
-        <div>
-          <FaEnvelope />
+        <div className="flex flex-row justify-start items-center gap-1 bg-[#C3DCE3] px-4 py-2 mb-3 text-[#757575] rounded-2xl">
+          <FaEnvelope className="fill-[#757575]" />
+          <label htmlFor="email"></label>
           <input
             id="email"
             name="email"
@@ -27,12 +29,13 @@ export const SingIn = () => {
             type="email"
             placeholder="Seu melhor e-mail"
             required
+            className="border-none focus:outline-none bg-transparent"
           />
         </div>
 
-        <label htmlFor="name"></label>
-        <div>
-          <FaUser />
+        <div className="flex flex-row justify-start items-center gap-1 bg-[#C3DCE3] px-4 py-2 mb-3 text-[#757575] rounded-2xl">
+          <FaUser className="fill-[#757575]" />
+          <label htmlFor="name"></label>
           <input
             id="name"
             name="name"
@@ -41,12 +44,13 @@ export const SingIn = () => {
             type="text"
             placeholder="Nome completo"
             required
+            className="border-none focus:outline-none bg-transparent"
           />
         </div>
 
-        <label htmlFor="password"></label>
-        <div>
-          <FaLock />
+        <div className="flex flex-row justify-start items-center gap-1 bg-[#C3DCE3] px-4 py-2 mb-3 text-[#757575] rounded-2xl">
+          <FaLock className="fill-[#757575]" />
+          <label htmlFor="password"></label>
           <input
             id="password"
             name="password"
@@ -55,12 +59,13 @@ export const SingIn = () => {
             type="password"
             placeholder="Senha"
             required
+            className="border-none focus:outline-none bg-transparent"
           />
         </div>
 
-        <label htmlFor="passwordConfirm"></label>
-        <div>
-          <FaLock />
+        <div className="flex flex-row justify-start items-center gap-1 bg-[#C3DCE3] px-4 py-2 mb-3 text-[#757575] rounded-2xl">
+          <FaUser className="fill-[#757575]" />
+          <label htmlFor="passwordConfirm"></label>
           <input
             id="passwordConfirm"
             name="passwordConfirm"
@@ -69,11 +74,14 @@ export const SingIn = () => {
             type="password"
             placeholder="Confirmar senha"
             required
+            className="border-none focus:outline-none bg-transparent"
           />
         </div>
 
-        <button className="bg-[#2B788B] text-white ">Registrar-se</button>
+        <button className="bg-[#2B788B] text-white px-4 py-2 rounded-2xl w-4/5 text-align">
+          Registrar-se
+        </button>
       </form>
-    </>
+    </div>
   );
 };
