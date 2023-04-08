@@ -1,8 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Header } from "../components/Header/Header";
 import AboutUsPage from "../pages/AboutUs/AboutUs";
+import DashboardPage from "../pages/Dashboard/Dashboard";
 import FaqPage from "../pages/Faq/faq";
 import HomePage from "../pages/Home/Home";
+import MyProjectsPage from "../pages/MyProjects/MyProjects";
+import ProjectFormPage from "../pages/ProjectForm/ProjectForm";
+import ProfilePage from "../pages/Profile/Profile";
+import SettingsPage from "../pages/Settings/Settings";
 
 export const Router = () => {
   return (
