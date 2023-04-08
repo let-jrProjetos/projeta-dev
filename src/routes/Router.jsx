@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Header } from "../components/Header/Header";
-import AboutUs from "../pages/AboutUs/AboutUs";
+import AboutUsPage from "../pages/AboutUs/AboutUs";
+import FaqPage from "../pages/Faq/faq";
 import HomePage from "../pages/Home/Home";
 
 export const Router = () => {
