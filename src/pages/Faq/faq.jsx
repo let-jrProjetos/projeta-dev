@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import perguntas from "../../assets/FaqJson/faq.json";
 import icon from "../../assets/img/faq/icon01.svg";
 
-export default function FaqPage() {
+const FaqPage = () => {
   const [faq, setFaq] = useState([]);
 
   useEffect(() => {
@@ -18,7 +18,8 @@ export default function FaqPage() {
       {faq.map((element, index) => (
         <div
           key={index}
-          className=" bg-white rounded-2xl shadow-md mb-8 md:mb10 lg:mb-12">
+          className=" bg-white rounded-2xl shadow-md mb-8 md:mb10 lg:mb-12"
+        >
           <p className=" font-dela text-black text-xl	 pt-2 mx-10 mt-10">
             {element.question}
           </p>
@@ -29,4 +30,5 @@ export default function FaqPage() {
       ))}
     </div>
   );
-}
+};
+export default FaqPage;
