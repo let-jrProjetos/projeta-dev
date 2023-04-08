@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import perguntas from "../../assets/FaqJson/faq.json";
 import icon from "../../assets/img/faq/icon01.svg";
 
-export default function Faq() {
+export default function FaqPage() {
   const [faq, setFaq] = useState([]);
 
   useEffect(() => {

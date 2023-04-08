@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useForm } from "../../hooks/useForm";
 
-const ProjectForm = () => {
+const ProjectFormPage = () => {
     const { form, onChange } = useForm({ projectName:"", link:"", startDate:"", dueDate:"", summary:"", desiredOutcome:"", beneficts:"", schedule:"", registrationDueDate:"", otherLanguage:"" })
 
     const projectExemple = 
