@@ -7,6 +7,7 @@ import {
   FaRegSun,
   FaSignOutAlt,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import { ProfilePhoto } from "../profilePhoto/ProfilePhoto";
 
 export const SideBarDesktop = ({
@@ -23,36 +24,42 @@ export const SideBarDesktop = ({
       <div className="z-100 absolute right-40 top-14 w-48 h-4/6 bg-white rounded-2xl border-2 ">
         <div className="h-full p-4 pb-6 flex flex-col text-[#C4C4C4] text-xl justify-between items-end">
           <div className="text-black text-sm py-1">Logo</div>
+          <Link to="/projetos">
+            <button
+              className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
+              // onClick={() => goToDashboard(navigate)}
+            >
+              <span className="font-Montserrat text-sm text-gray-header px-2">
+                Dashboard
+              </span>
+              <FaPager />
+            </button>
+          </Link>
+          <Link to="/meusProjetos/:id">
+            <button
+              className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
+              // onClick={() => goToProjects(navigate)}
+            >
+              <span className="font-Montserrat text-sm text-gray-header px-2">
+                Meus Projetos
+              </span>
+              <FaFolderOpen />
+            </button>
+          </Link>
+          <Link to="/novoProjeto/:id">
+            <button
+              className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
+              // onClick={() => goToProjectForm(navigate)}
+            >
+              <span className="font-Montserrat text-sm text-gray-header px-2">
+                Novo Projeto
+              </span>
+              <FaFolderPlus />
+            </button>
+          </Link>
           <button
             className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
-            onClick={() => goToDashboard(navigate)}
-          >
-            <span className="font-Montserrat text-sm text-gray-header px-2">
-              Dashboard
-            </span>
-            <FaPager />
-          </button>
-          <button
-            className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
-            onClick={() => goToProjects(navigate)}
-          >
-            <span className="font-Montserrat text-sm text-gray-header px-2">
-              Projetos
-            </span>
-            <FaFolderOpen />
-          </button>
-          <button
-            className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
-            onClick={() => goToProjectForm(navigate)}
-          >
-            <span className="font-Montserrat text-sm text-gray-header px-2">
-              Novo Projeto
-            </span>
-            <FaFolderPlus />
-          </button>
-          <button
-            className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
-            onClick={() => goToMessages(navigate)}
+            // onClick={() => goToMessages(navigate)}
           >
             <span className="font-Montserrat text-sm text-gray-header px-2">
               Mensagens
@@ -60,34 +67,42 @@ export const SideBarDesktop = ({
             <FaRegEnvelope />
           </button>
           <div className="w-36 border-b-2 border-[#C4C4C4] py-1 mr-1"></div>
-          <button
-            className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
-            onClick={() => goToHelp(navigate)}
-          >
-            <span className="font-Montserrat text-sm text-gray-header px-2">
-              Ajuda
-            </span>
-            <FaQuestionCircle />
-          </button>
-          <button
-            className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
-            onClick={() => goToSettings(navigate)}
-          >
-            <span className="font-Montserrat text-sm text-gray-header px-2">
-              Configurações
-            </span>
-            <FaRegSun />
-          </button>
-          <ProfilePhoto user={user} />
-          <button
-            className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
-            onClick={() => setIsLogedIn(false)}
-          >
-            <span className="font-Montserrat text-sm text-gray-header px-2">
-              Sair
-            </span>
-            <FaSignOutAlt />
-          </button>
+          <Link to="/perguntasFrequentes">
+            <button
+              className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
+              // onClick={() => goToHelp(navigate)}
+            >
+              <span className="font-Montserrat text-sm text-gray-header px-2">
+                Ajuda
+              </span>
+              <FaQuestionCircle />
+            </button>
+          </Link>
+          <Link to="/editarPerfil/:id">
+            <button
+              className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
+              // onClick={() => goToSettings(navigate)}
+            >
+              <span className="font-Montserrat text-sm text-gray-header px-2">
+                Configurações
+              </span>
+              <FaRegSun />
+            </button>
+          </Link>
+          <Link to="/meuPerfil/:id">
+            <ProfilePhoto user={user} />
+          </Link>
+          <Link to="/">
+            <button
+              className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
+              onClick={() => setIsLogedIn(false)}
+            >
+              <span className="font-Montserrat text-sm text-gray-header px-2">
+                Sair
+              </span>
+              <FaSignOutAlt />
+            </button>
+          </Link>
         </div>
       </div>
     </div>
