@@ -27,7 +27,7 @@ export const SideBarDesktop = ({ user, setIsLogedIn, setIsSideBarDesktop }) => {
               <FaPager />
             </button>
           </Link>
-          <Link to="/meusProjetos/:id">
+          <Link to={`/meusProjetos/${user.id}`}>
             <button className="flex items-center hover:text-[#C3DCE3] active:text-blue-green">
               <span className="font-Montserrat text-sm text-gray-header px-2">
                 Meus Projetos
@@ -35,7 +35,7 @@ export const SideBarDesktop = ({ user, setIsLogedIn, setIsSideBarDesktop }) => {
               <FaFolderOpen />
             </button>
           </Link>
-          <Link to="/novoProjeto/:id">
+          <Link to={`/novoProjeto/${user.id}`}>
             <button className="flex items-center hover:text-[#C3DCE3] active:text-blue-green">
               <span className="font-Montserrat text-sm text-gray-header px-2">
                 Novo Projeto
@@ -58,7 +58,7 @@ export const SideBarDesktop = ({ user, setIsLogedIn, setIsSideBarDesktop }) => {
               <FaQuestionCircle />
             </button>
           </Link>
-          <Link to="/editarPerfil/:id">
+          <Link to={`/editarPerfil/${user.id}`}>
             <button className="flex items-center hover:text-[#C3DCE3] active:text-blue-green">
               <span className="font-Montserrat text-sm text-gray-header px-2">
                 Configurações
@@ -66,7 +66,7 @@ export const SideBarDesktop = ({ user, setIsLogedIn, setIsSideBarDesktop }) => {
               <FaRegSun />
             </button>
           </Link>
-          <Link to="/meuPerfil/:id">
+          <Link to={`/meuPerfil/${user.id}`}>
             <ProfilePhoto user={user} />
           </Link>
           <Link to="/">

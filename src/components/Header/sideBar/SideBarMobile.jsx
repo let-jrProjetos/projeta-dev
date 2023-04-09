@@ -24,12 +24,12 @@ export const SideBarMobile = ({ user, setIsLogedIn, setSideBarMobile }) => {
               <FaPager />
             </button>
           </Link>
-          <Link to="/meusProjetos/:id">
+          <Link to={`/meusProjetos/${user.id}`}>
             <button className="hover:text-[#C3DCE3] active:text-blue-green">
               <FaFolderOpen />
             </button>
           </Link>
-          <Link to="/novoProjeto/:id">
+          <Link to={`/novoProjeto/${user.id}`}>
             <button className="hover:text-[#C3DCE3] active:text-blue-green">
               <FaFolderPlus />
             </button>
@@ -43,12 +43,12 @@ export const SideBarMobile = ({ user, setIsLogedIn, setSideBarMobile }) => {
               <FaQuestionCircle />
             </button>
           </Link>
-          <Link to="/editarMeuPerfil/:id">
+          <Link to={`/editarPerfil/${user.id}`}>
             <button className="hover:text-[#C3DCE3] active:text-blue-green">
               <FaRegSun />
             </button>
           </Link>
-          <Link to="/meuPerfil/:id">
+          <Link to={`/meuPerfil/${user.id}`}>
             <ProfilePhoto user={user} />
           </Link>
           <Link to="/">
