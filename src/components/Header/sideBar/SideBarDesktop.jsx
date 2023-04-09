@@ -10,12 +10,7 @@ import {
 import { Link } from "react-router-dom";
 import { ProfilePhoto } from "../profilePhoto/ProfilePhoto";
 
-export const SideBarDesktop = ({
-  user,
-  navigate,
-  setIsLogedIn,
-  setIsSideBarDesktop,
-}) => {
+export const SideBarDesktop = ({ user, setIsLogedIn, setIsSideBarDesktop }) => {
   return (
     <div
       className="hidden absolute top-0 left-0 w-full h-screen bg-transparent lg:flex"
@@ -25,10 +20,7 @@ export const SideBarDesktop = ({
         <div className="h-full p-4 pb-6 flex flex-col text-[#C4C4C4] text-xl justify-between items-end">
           <div className="text-black text-sm py-1">Logo</div>
           <Link to="/projetos">
-            <button
-              className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
-              // onClick={() => goToDashboard(navigate)}
-            >
+            <button className="flex items-center hover:text-[#C3DCE3] active:text-blue-green">
               <span className="font-Montserrat text-sm text-gray-header px-2">
                 Dashboard
               </span>
@@ -36,10 +28,7 @@ export const SideBarDesktop = ({
             </button>
           </Link>
           <Link to="/meusProjetos/:id">
-            <button
-              className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
-              // onClick={() => goToProjects(navigate)}
-            >
+            <button className="flex items-center hover:text-[#C3DCE3] active:text-blue-green">
               <span className="font-Montserrat text-sm text-gray-header px-2">
                 Meus Projetos
               </span>
@@ -47,20 +36,14 @@ export const SideBarDesktop = ({
             </button>
           </Link>
           <Link to="/novoProjeto/:id">
-            <button
-              className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
-              // onClick={() => goToProjectForm(navigate)}
-            >
+            <button className="flex items-center hover:text-[#C3DCE3] active:text-blue-green">
               <span className="font-Montserrat text-sm text-gray-header px-2">
                 Novo Projeto
               </span>
               <FaFolderPlus />
             </button>
           </Link>
-          <button
-            className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
-            // onClick={() => goToMessages(navigate)}
-          >
+          <button className="flex items-center hover:text-[#C3DCE3] active:text-blue-green">
             <span className="font-Montserrat text-sm text-gray-header px-2">
               Mensagens
             </span>
@@ -68,10 +51,7 @@ export const SideBarDesktop = ({
           </button>
           <div className="w-36 border-b-2 border-[#C4C4C4] py-1 mr-1"></div>
           <Link to="/perguntasFrequentes">
-            <button
-              className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
-              // onClick={() => goToHelp(navigate)}
-            >
+            <button className="flex items-center hover:text-[#C3DCE3] active:text-blue-green">
               <span className="font-Montserrat text-sm text-gray-header px-2">
                 Ajuda
               </span>
@@ -79,10 +59,7 @@ export const SideBarDesktop = ({
             </button>
           </Link>
           <Link to="/editarPerfil/:id">
-            <button
-              className="flex items-center hover:text-[#C3DCE3] active:text-blue-green"
-              // onClick={() => goToSettings(navigate)}
-            >
+            <button className="flex items-center hover:text-[#C3DCE3] active:text-blue-green">
               <span className="font-Montserrat text-sm text-gray-header px-2">
                 Configurações
               </span>

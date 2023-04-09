@@ -10,12 +10,7 @@ import {
 import { Link } from "react-router-dom";
 import { ProfilePhoto } from "../profilePhoto/ProfilePhoto";
 
-export const SideBarMobile = ({
-  user,
-  navigate,
-  setIsLogedIn,
-  setSideBarMobile,
-}) => {
+export const SideBarMobile = ({ user, setIsLogedIn, setSideBarMobile }) => {
   return (
     <div
       className="absolute top-0 left-0 w-full h-screen bg-transparent lg:hidden"
@@ -27,36 +22,30 @@ export const SideBarMobile = ({
           <Link to="/projetos">
             <button className="hover:text-[#C3DCE3] active:text-blue-green">
               <FaPager />
-              {/* onClick={() => goToDashboard(navigate)}  */}
             </button>
           </Link>
           <Link to="/meusProjetos/:id">
             <button className="hover:text-[#C3DCE3] active:text-blue-green">
               <FaFolderOpen />
-              {/* onClick={() => goToProjects(navigate)}  */}
             </button>
           </Link>
           <Link to="/novoProjeto/:id">
             <button className="hover:text-[#C3DCE3] active:text-blue-green">
               <FaFolderPlus />
-              {/*  onClick={() => goToProjectForm(navigate)}  */}
             </button>
           </Link>
           <button className="hover:text-[#C3DCE3] active:text-blue-green">
             <FaRegEnvelope />
-            {/* onClick={() => goToMessages(navigate)}  */}
           </button>
           <div className="w-9 border-b-2 border-[#C4C4C4] py-1"></div>
           <Link to="/perguntasFrequentes">
             <button className="hover:text-[#C3DCE3] active:text-blue-green">
               <FaQuestionCircle />
-              {/* onClick={() => goToHelp(navigate)}  */}
             </button>
           </Link>
           <Link to="/editarMeuPerfil/:id">
             <button className="hover:text-[#C3DCE3] active:text-blue-green">
               <FaRegSun />
-              {/*  onClick={() => goToSettings(navigate)}  */}
             </button>
           </Link>
           <Link to="/meuPerfil/:id">
