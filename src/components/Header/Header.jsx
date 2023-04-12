@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
 import { HamburguerMenu } from "./hamburger/HamburguerMenu";
 import { HorizontalMenuLogin } from "./horizontalMenu/Login";
 import { HorizontalMenuUser } from "./horizontalMenu/User";
@@ -10,10 +9,8 @@ import { SideBarDesktop } from "./sideBar/SideBarDesktop";
 import { SideBarMobile } from "./sideBar/SideBarMobile";
 
 export const Header = () => {
-  const navigate = useNavigate();
-
   const [isLogedIn, setIsLogedIn] = useState(true);
-  const [user, setUser] = useState({ name: "Alex" });
+  const [user, setUser] = useState({ name: "Alex", id: "AlexA" });
   const [isBurguerOpen, setIsBurguerOpen] = useState(false);
   const [isSideBarMobile, setIsSideBarMobile] = useState(false);
   const [isSideBarDesktop, setIsSideBarDesktop] = useState(false);
@@ -24,11 +21,7 @@ export const Header = () => {
         <button className="lg:hidden" onClick={() => setIsBurguerOpen(true)}>
           <FaBars />
         </button>
-        {isLogedIn ? (
-          <HorizontalMenuUser navigate={navigate} />
-        ) : (
-          <HorizontalMenuLogin navigate={navigate} />
-        )}
+        {isLogedIn ? <HorizontalMenuUser /> : <HorizontalMenuLogin />}
         {isLogedIn ? (
           <RightMenuUser
             user={user}
@@ -36,7 +29,7 @@ export const Header = () => {
             setIsSideBarDesktop={setIsSideBarDesktop}
           />
         ) : (
-          <RightMenuLogin navigate={navigate} />
+          <RightMenuLogin />
         )}
       </div>
       {isBurguerOpen ? (
@@ -46,7 +39,6 @@ export const Header = () => {
       )}
       {isSideBarMobile ? (
         <SideBarMobile
-          navigate={navigate}
           user={user}
           setIsLogedIn={setIsLogedIn}
           setSideBarMobile={setIsSideBarMobile}
@@ -56,7 +48,6 @@ export const Header = () => {
       )}
       {isSideBarDesktop ? (
         <SideBarDesktop
-          navigate={navigate}
           user={user}
           setIsLogedIn={setIsLogedIn}
           setIsSideBarDesktop={setIsSideBarDesktop}
