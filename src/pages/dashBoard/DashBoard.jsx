@@ -3,42 +3,43 @@ import project from "../../../db.json";
 import { ProjectCard } from "../../components/dashBoard/projectCard";
 import ReactPaginate from "react-paginate";
 
-export default function DashBoard() {
-  const [itens, setItens] = useState([]);
-  const [itensPerPage, setItensPerPage] = useState(10);
-  const [currentPage, setCurrentPage] = useState(0);
-
-  const pages = Math.ceil(itens.length / itensPerPage);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await fetch(project.project)
-        .then((response) => response.json())
-        .then((data) => data);
-
-      setItens(result);
-    };
-    fetchData();
-  }, []);
-
+export default function DashBoard({ currentItems }) {
+  console.log(project);
   return (
     <div class="  flex flex-wrap md:flex-wrap justify-center gap-4 bg-grey-123	p-4 items-center ">
-      <div>
-        <div>{pages}</div>
-
-        {Array.from(Array(pages), (item, index) => {
-          return (
-            <>
-              <div>{pages}</div>
-              <div>{index}</div>
-              <div>{item}</div>
-            </>
-          );
-        })}
-      </div>
-      {project.project.map((elementos, index) => (
+      {currentItems.map((elementos, index) => (
         <ProjectCard elementos={elementos} key={index} />
       ))}
     </div>
+  );
+}
+
+export function PaginatedItems({ itemsPerPage }) {
+  const [itemOffset, setItemOffset] = useState(0);
+
+  const endOffset = itemOffset + itemsPerPage;
+
+  const currentItems = project.project.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(project.project.length / itemsPerPage);
+
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % items.length;
+
+    setItemOffset(newOffset);
+  };
+
+  return (
+    <>
+      <DashBoard currentItems={currentItems} />
+      <ReactPaginate
+        breakLabel="..."
+        nextLabel="next >"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={5}
+        pageCount={pageCount}
+        previousLabel="< "
+        renderOnZeroPageCount={null}
+      />
+    </>
   );
 }
