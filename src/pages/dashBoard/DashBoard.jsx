@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import project from "../../../db.json";
 import { ProjectCard } from "../../components/dashBoard/projectCard";
+import ReactPaginate from "react-paginate";
 
 export default function DashBoard() {
   const [itens, setItens] = useState([]);
