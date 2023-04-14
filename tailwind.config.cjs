@@ -4,10 +4,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        grey: {
+        gray: {
           123: "#F6F5F4",
-          bgGreen: "#639B6D",
-          bgRed: "#CB5B43",
+          header: "#585858",
+          text: "#757575",
+        },
+        blue: {
+          green: "#2B788B",
         },
       },
     },
