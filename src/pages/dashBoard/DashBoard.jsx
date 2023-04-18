@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import project from "../../../db.json";
 import { ProjectCard } from "../../components/dashBoard/projectCard";
 import ReactPaginate from "react-paginate";
-import { FaArrowLeft } from "react-icons/fa";
 
-const ITEMS_PER_PAGE = 2;
+const ITEMS_PER_PAGE = 6;
 
 export default function DashboardPage() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -13,13 +12,24 @@ export default function DashboardPage() {
     setCurrentPage(selectedPage);
   };
 
-  const currentItems = project.project.slice(
+  const filteredProjects = project.project.filter(
+    (element) => element.myProjects === true
+  );
+
+  const currentItems = filteredProjects.slice(
     currentPage * ITEMS_PER_PAGE,
     (currentPage + 1) * ITEMS_PER_PAGE
   );
 
-  const pageCount = Math.ceil(project.project.length / ITEMS_PER_PAGE);
+  const pageCount = Math.ceil(filteredProjects.length / ITEMS_PER_PAGE);
 
+  if (filteredProjects.length === 0) {
+    return (
+      <div className="flex justify-center h-80 items-center m-20">
+        <p>Não há projetos disponíveis.</p>
+      </div>
+    );
+  }
   return (
     <>
       <div className="flex flex-wrap md:flex-wrap justify-center gap-4 bg-grey-123 p-4 items-center">

@@ -33,11 +33,11 @@ export function ProjectCard({ elementos }) {
             <p> Prazo Sugerido: {elementos.prazo}</p>
           </div>
 
-          <div className="card-title flex justify-around pt-8">
-            <h2 className=" rounded-lg bg-grey-bgGreen text-white px-4">
+          <div className="card-title flex justify-around pt-4">
+            <h2 className=" rounded-lg bg-green-greenAdd text-white px-4">
               Adicionar
             </h2>
-            <h2 className="bg-grey-bgRed rounded-lg text-white px-4">
+            <h2 className="bg-red-redAdd rounded-lg text-white px-4">
               Remover{" "}
             </h2>
           </div>
