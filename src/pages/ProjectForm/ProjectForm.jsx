@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "../../hooks/useForm";
 
-const ProjectForm = () => {
+const ProjectFormPage = () => {
   const { form, onChange } = useForm({
     projectName: "",
     link: "",
@@ -276,4 +276,4 @@ const ProjectForm = () => {
     </div>
   );
 };
-export default ProjectForm;
+export default ProjectFormPage;
