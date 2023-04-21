@@ -1,4 +1,5 @@
 import { FaArrowRight } from "react-icons/fa";
+import { SingIn } from "../../modal/SingIn";
 
 export const RightMenuLogin = () => {
   return (
@@ -10,9 +11,7 @@ export const RightMenuLogin = () => {
         </div>
         <FaArrowRight />
       </div>
-      <div className="bg-[#2B788B] font-Montserrat font-bold text-white text-xs px-4 py-3 rounded-xl">
-        Cadastrar
-      </div>
+      <SingIn />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import { useForm } from "../hooks/useForm";
+import { useForm } from "../../hooks/useForm";
 import { FaEnvelope, FaUser, FaLock } from "react-icons/fa";
 
 export const SingIn = () => {
@@ -8,14 +8,19 @@ export const SingIn = () => {
     password: "",
     passwordConfirm: "",
   });
-  //onSubmit={submitFormSingIn}
+
+  const submitFormSingIn = (event) => {
+    event.preventDefault();
+    console.log(form);
+  };
+
   return (
     <div>
       <label
         htmlFor="my-modal-6"
-        className="btn bg-[#2B788B] px-4 py-2 rounded-2xl text-align"
+        className="btn bg-[#2B788B] border-2 border-transparent font-Montserrat font-bold text-white text-xs px-4 py-2 rounded-2xl hover:bg-white hover:border-2 hover:border-[#2B788B] hover:text-[#2B788B]"
       >
-        SING IN
+        Cadastrar
       </label>
 
       <input type="checkbox" id="my-modal-6" className="modal-toggle" />
@@ -25,7 +30,10 @@ export const SingIn = () => {
             NOSSO NOME AQUI
           </div>
 
-          <form className="flex flex-col gap-8 w-10/12 ">
+          <form
+            onSubmit={submitFormSingIn}
+            className="flex flex-col gap-8 w-10/12 "
+          >
             <div className="flex flex-row justify-start items-center gap-1 bg-[#C3DCE3] px-4 py-2 rounded-2xl focus-within:outline">
               <FaEnvelope className="fill-[#757575]" />
               <label htmlFor="email"></label>
@@ -90,7 +98,8 @@ export const SingIn = () => {
           <div className="modal-action">
             <label
               htmlFor="my-modal-6"
-              className="btn bg-blue-green border-none w-48 md:w-60 mt-2 mb-6 rounded-2xl font-Dela font-thin text-xs capitalize tracking-[.25em]"
+              type="submit"
+              className="btn bg-blue-green border-none w-48 md:w-60 mt-2 mb-6 rounded-2xl font-Dela font-thin text-xs capitalize tracking-[.15em]"
             >
               Registrar-se
             </label>
