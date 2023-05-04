@@ -80,7 +80,7 @@
       "front": true,
       "back": true,
       "sql": true,
-      "myProjects": true,
+      "myProjects": false,
       "descriptionOne": "Conversor de medidas",
       "descriptionTwo": "APP que permite a conversão de mais de 200 medidas. Simples e intuitivo para atender a todas as demandas. ",
       "details": "",

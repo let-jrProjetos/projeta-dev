@@ -7,7 +7,7 @@ import {
   FaBookOpen,
   FaGraduationCap,
 } from "react-icons/fa";
-
+import { EmptyProjectPage } from "../../components/Projects/emptyProjectPage";
 const ITEMS_PER_PAGE = 6;
 
 const ProjectsPage = () => {
@@ -50,11 +50,7 @@ const ProjectsPage = () => {
   if (
     projectList.filter((element) => element.myProjects === true).length === 0
   ) {
-    return (
-      <div className="flex justify-center items-center m-20 bg-gray-123 ">
-        <p>Não há projetos a serem exibidos.</p>
-      </div>
-    );
+    return <EmptyProjectPage />;
   }
 
   return (
