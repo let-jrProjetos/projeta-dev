@@ -3,7 +3,6 @@ import project from "../../../db.json";
 import { ProjectCard } from "../../components/Projects/ProjectCard";
 import ReactPaginate from "react-paginate";
 import { EmptyProjectPage } from "../../components/Projects/emptyProjectPage";
-import { AddRemoveComponent } from "../../components/ButtonComponent/AddRemoveComponent";
 import { FilterMenu } from "../../components/FilterMenu/FilterMenu";
 const ITEMS_PER_PAGE = 6;
 
@@ -56,6 +55,7 @@ const ProjectsPage = () => {
         showMyProjects={showMyProjects}
         handleShowMyProjects={handleShowMyProjects}
         handleShowOtherProjects={handleShowOtherProjects}
+        projectList={projectList}
       />
 
       <div className="flex flex-wrap md:flex-wrap justify-center gap-4 bg-gray-123 p-4 items-center">

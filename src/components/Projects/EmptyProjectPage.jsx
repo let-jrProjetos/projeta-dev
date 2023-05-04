@@ -5,8 +5,8 @@ import { useState } from "react";
 export const EmptyProjectPage = () => {
   const [user, setUser] = useState({ name: "Alex", id: "AlexA" });
   return (
-    <div className=" bg-gray-123 h-full font-Montserrat  p-32 gap-40 flex flex-col justify-center items-center ">
-      <p className=" rounded-lg p-11 bg-white text-black flex justify-center items-center ">
+    <div className=" rounded-lg bg-gray-123 h-full font-Montserrat  p-32 gap-40 flex flex-col justify-center items-center ">
+      <p className=" p-11  bg-white text-black flex justify-center items-center ">
         <p>
           Infelizmente nós ainda não temos nenhum projeto seu para mostrar. =({" "}
         </p>
