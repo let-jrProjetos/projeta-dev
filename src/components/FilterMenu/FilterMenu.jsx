@@ -7,7 +7,7 @@ import {
   FaGripLinesVertical,
 } from "react-icons/fa";
 
-export const AddRemoveComponent = ({
+export const FilterMenu = ({
   showMyProjects,
   handleShowMyProjects,
   handleShowOtherProjects,

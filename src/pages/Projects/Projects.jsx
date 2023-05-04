@@ -3,7 +3,8 @@ import project from "../../../db.json";
 import { ProjectCard } from "../../components/Projects/ProjectCard";
 import ReactPaginate from "react-paginate";
 import { EmptyProjectPage } from "../../components/Projects/emptyProjectPage";
-import { AddRemoveComponent } from "../../components/button/AddRemoveComponent";
+import { AddRemoveComponent } from "../../components/ButtonComponent/AddRemoveComponent";
+import { FilterMenu } from "../../components/FilterMenu/FilterMenu";
 const ITEMS_PER_PAGE = 6;
 
 const ProjectsPage = () => {
@@ -21,12 +22,12 @@ const ProjectsPage = () => {
 
   const handleShowMyProjects = () => {
     setShowMyProjects(true);
-    setCurrentPage(0); // resetar a página atual quando mudar a lista de projetos
+    setCurrentPage(0);
   };
 
   const handleShowOtherProjects = () => {
     setShowMyProjects(false);
-    setCurrentPage(0); // resetar a página atual quando mudar a lista de projetos
+    setCurrentPage(0);
   };
 
   const filteredProjects = showMyProjects
@@ -51,7 +52,7 @@ const ProjectsPage = () => {
 
   return (
     <>
-      <AddRemoveComponent
+      <FilterMenu
         showMyProjects={showMyProjects}
         handleShowMyProjects={handleShowMyProjects}
         handleShowOtherProjects={handleShowOtherProjects}
