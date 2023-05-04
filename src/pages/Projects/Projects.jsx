@@ -2,11 +2,6 @@ import React, { useState, useEffect } from "react";
 import project from "../../../db.json";
 import { ProjectCard } from "../../components/Projects/ProjectCard";
 import ReactPaginate from "react-paginate";
-import {
-  FaGripLinesVertical,
-  FaBookOpen,
-  FaGraduationCap,
-} from "react-icons/fa";
 import { EmptyProjectPage } from "../../components/Projects/emptyProjectPage";
 import { AddRemoveComponent } from "../../components/button/AddRemoveComponent";
 const ITEMS_PER_PAGE = 6;
@@ -61,29 +56,7 @@ const ProjectsPage = () => {
         handleShowMyProjects={handleShowMyProjects}
         handleShowOtherProjects={handleShowOtherProjects}
       />
-      {/* <div className="flex justify-center items-center gap-2 p-6 bg-gray-123 font-Dela">
-        <button
-          className={`flex justify-center items-center gap-4 m-4 p-4 bg-white focus:text-black ${
-            showMyProjects ? "text-black font-bold" : "text-green"
-          }`}
-          onClick={handleShowMyProjects}
-        >
-          <FaBookOpen />
-          Meus Projetos
-        </button>
-        <div className="opacity-25">
-          <FaGripLinesVertical />
-        </div>
-        <button
-          className={`flex justify-center items-center gap-4 m-4 p-4 bg-white focus:text-black ${
-            !showMyProjects ? "text-black font-bold" : "text-green"
-          }`}
-          onClick={handleShowOtherProjects}
-        >
-          <FaGraduationCap />
-          Todos Projetos
-        </button>
-      </div> */}
+
       <div className="flex flex-wrap md:flex-wrap justify-center gap-4 bg-gray-123 p-4 items-center">
         {currentItems.map((elementos, index) => (
           <ProjectCard
