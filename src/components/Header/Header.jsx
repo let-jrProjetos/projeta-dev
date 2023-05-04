@@ -16,7 +16,7 @@ export const Header = () => {
   const [isSideBarDesktop, setIsSideBarDesktop] = useState(false);
 
   return (
-    <header className="w-full h-14 bg-[#F6F5F4] font-Dela text-black text-sm font-normal px-5 border-b-1">
+    <header className="w-full h-14 bg-[#F6F5F4] text-black text-sm px-5 border-b-1">
       <div className="relative w-full h-full flex justify-between items-center">
         <button className="lg:hidden" onClick={() => setIsBurguerOpen(true)}>
           <FaBars />
