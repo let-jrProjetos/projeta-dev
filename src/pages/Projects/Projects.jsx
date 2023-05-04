@@ -55,28 +55,13 @@ const ProjectsPage = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center p-6 bg-gray-123 font-Dela">
-        <button
-          className="flex justify-center items-center gap-4 m-4 p-4 bg-white text-green  focus:text-black"
-          onClick={handleShowMyProjects}
-        >
-          <FaBookOpen />
-          Meus Projetos
-        </button>
-        <div className="opacity-25">
-          <FaGripLinesVertical />
-        </div>
-        <button
-          className=" flex  gap-4   p-4 bg-white  text-green  focus:text-black"
-          onClick={handleShowOtherProjects}
-        >
-          <FaGraduationCap />
-          Todos Projetos
-        </button>
-      </div>
       <div className="flex flex-wrap md:flex-wrap justify-center gap-4 bg-gray-123 p-4 items-center">
         {currentItems.map((elementos, index) => (
-          <ProjectCard key={index} elementos={elementos} />
+          <ProjectCard
+            key={index}
+            elementos={elementos}
+            showMyProjects={showMyProjects}
+          />
         ))}
       </div>
 

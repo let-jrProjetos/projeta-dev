@@ -1,6 +1,6 @@
 import React from "react";
 
-export function ProjectCard({ elementos }) {
+export function ProjectCard({ elementos, showMyProjects }) {
   return (
     <>
       <div className="  card w-96 shadow-xl   bg-white  ">
@@ -34,12 +34,24 @@ export function ProjectCard({ elementos }) {
           </div>
 
           <div className="card-title flex justify-around pt-4">
-            <h2 className=" rounded-lg bg-green-greenAdd text-white px-4">
+            <button
+              className={`${
+                showMyProjects
+                  ? "hidden"
+                  : "rounded-lg bg-green-greenAdd text-white px-4"
+              }`}
+            >
               Adicionar
-            </h2>
-            <h2 className="bg-red-redAdd rounded-lg text-white px-4">
+            </button>
+            <button
+              className={`${
+                !showMyProjects
+                  ? "hidden"
+                  : "bg-red-redAdd rounded-lg text-white px-4"
+              }`}
+            >
               Remover{" "}
-            </h2>
+            </button>
           </div>
         </div>
       </div>
