@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 import project from "../../../db.json";
 import { ProjectCard } from "../../components/Projects/ProjectCard";
 import ReactPaginate from "react-paginate";
+import {
+  FaGripLinesVertical,
+  FaBookOpen,
+  FaGraduationCap,
+} from "react-icons/fa";
 
 const ITEMS_PER_PAGE = 6;
 
@@ -41,34 +46,36 @@ const ProjectsPage = () => {
       (currentPage + 1) * ITEMS_PER_PAGE
     );
     pageCount = Math.ceil(filteredProjects.length / ITEMS_PER_PAGE);
-  } else if (
-    projectList.filter((element) => element.myProjects === true).length > 0
+  }
+  if (
+    projectList.filter((element) => element.myProjects === true).length === 0
   ) {
     return (
       <div className="flex justify-center items-center m-20 bg-gray-123 ">
-        <p>Não há ainda projetos a serem exibidos.</p>
+        <p>Não há projetos a serem exibidos.</p>
       </div>
     );
   }
 
   return (
     <>
-      <div className="flex justify-center gap-4 my-4">
+      <div className="flex justify-center items-center p-6 bg-gray-123 font-Dela">
         <button
-          className={`${
-            showMyProjects ? "bg-gray-700 text-white" : ""
-          } px-4 py-2 rounded-md`}
+          className="flex justify-center items-center gap-4 m-4 p-4 bg-white text-green  focus:text-black"
           onClick={handleShowMyProjects}
         >
+          <FaBookOpen />
           Meus Projetos
         </button>
+        <div className="opacity-25">
+          <FaGripLinesVertical />
+        </div>
         <button
-          className={`${
-            !showMyProjects ? "bg-gray-700 text-white" : ""
-          } px-4 py-2 rounded-md`}
+          className=" flex  gap-4   p-4 bg-white  text-green  focus:text-black"
           onClick={handleShowOtherProjects}
         >
-          Outros Projetos
+          <FaGraduationCap />
+          Todos Projetos
         </button>
       </div>
       <div className="flex flex-wrap md:flex-wrap justify-center gap-4 bg-gray-123 p-4 items-center">
@@ -79,7 +86,7 @@ const ProjectsPage = () => {
 
       <div className=" flex justify-center bg-gray-123 p-8">
         <ReactPaginate
-          className="flex justify-between w-48  hover:text-[#C3DCE3] active:text-blue-green "
+          className="flex justify-between w-48  "
           breakLabel="..."
           nextLabel=" >"
           onPageChange={handlePageClick}
@@ -88,8 +95,8 @@ const ProjectsPage = () => {
           previousLabel="< "
           renderOnZeroPageCount={null}
           containerClassName="pagination-container"
-          pageClassName="pagination-page"
-          activeClassName="pagination-active"
+          pageClassName="pagination-page "
+          activeClassName="font-bold text-black pagination-active"
           disabledClassName="pagination-disabled"
         />
       </div>

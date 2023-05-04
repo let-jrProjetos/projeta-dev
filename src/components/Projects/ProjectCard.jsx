@@ -3,7 +3,7 @@ import React from "react";
 export function ProjectCard({ elementos }) {
   return (
     <>
-      <div className="card w-96 shadow-xl   bg-white  ">
+      <div className="  card w-96 shadow-xl   bg-white  ">
         <figure>
           <img
             className="h-56 w-96"
