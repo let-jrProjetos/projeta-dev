@@ -69,29 +69,40 @@ export const Login = () => {
               />
             </div>
 
-            <input
-              id="remember"
-              name="remember"
-              type="checkbox"
-              className="bg-[#C3DCE3]"
-            />
-            <label htmlFor="remember" className="text-black">
-              MANTER CONECTADO
-            </label>
+            <div className="flex flex-col gap-2 md:flex-row md:justify-between">
+              <p className="btn-link font-Dela text-xs text-blue-green no-underline hover:cursor-pointer md:order-last">
+                Esqueceu sua senha?
+              </p>
+              <div>
+                <input
+                  id="remember"
+                  name="remember"
+                  type="checkbox"
+                  className="default:bg-[#C3DCE3]"
+                />
+                <label htmlFor="remember" className="font-Montserrat">
+                  Manter Conectado
+                </label>
+              </div>
+            </div>
 
             <div className="modal-action grid grid-cols-4">
               <label
                 htmlFor="modalLogin"
                 type="submit"
-                className="btn col-start-2 col-span-2 bg-blue-green border-2 border-transparent mt-4 mb-6 rounded-2xl font-Dela font-thin text-xs capitalize tracking-[.15em] hover:bg-white hover:border-2 hover:border-[#2B788B] hover:text-[#2B788B]"
+                className="btn col-start-2 col-span-2 bg-blue-green border-2 border-transparent mt-2 mb-2 rounded-2xl font-Dela font-thin text-xs capitalize tracking-[.15em] hover:bg-white hover:border-2 hover:border-[#2B788B] hover:text-[#2B788B]"
               >
                 Entrar
               </label>
             </div>
           </form>
 
-          <p>Esqueceu sua senha? Clique aqui</p>
-          <p>Não tem uma conta? Crie agora!</p>
+          <div className="font-Dela text-xs mb-6">
+            Não tem uma conta?{" "}
+            <span className="btn-link font-Dela text-xs text-blue-green no-underline hover:cursor-pointer">
+              Crie agora!
+            </span>
+          </div>
         </div>
       </div>
     </div>
