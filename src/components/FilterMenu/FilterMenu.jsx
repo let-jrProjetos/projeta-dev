@@ -13,10 +13,6 @@ export const FilterMenu = ({
   handleShowOtherProjects,
   projectList,
 }) => {
-  //   let filterProject;
-  //   if (projectList.filter((element) => element.front === true)) {
-  //     return (filterProject = element);
-  //   }
   return (
     <>
       <div className="flex flex-col sm:flex-row justify-center items-center gap-2  bg-gray-123 font-Dela">

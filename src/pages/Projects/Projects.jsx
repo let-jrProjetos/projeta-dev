@@ -4,6 +4,7 @@ import { ProjectCard } from "../../components/Projects/ProjectCard";
 import ReactPaginate from "react-paginate";
 import { EmptyProjectPage } from "../../components/Projects/emptyProjectPage";
 import { FilterMenu } from "../../components/FilterMenu/FilterMenu";
+
 const ITEMS_PER_PAGE = 6;
 
 const ProjectsPage = () => {
