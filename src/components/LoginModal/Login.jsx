@@ -1,7 +1,7 @@
 import { useForm } from "../../hooks/useForm";
 import { FaArrowRight, FaEnvelope, FaLock } from "react-icons/fa";
 
-export const SingIn = () => {
+export const Login = () => {
   const { form, onChange } = useForm({
     email: "",
     password: "",
@@ -16,9 +16,9 @@ export const SingIn = () => {
     <div>
       <label
         htmlFor="modalLogin"
-        className="ont-Montserrat font-bold text-black text-sm"
+        className="btn-link flex justify-space-between items-center gap-1 text-sm text-black no-underline hover:cursor-pointer"
       >
-        Entrar
+        <div className="font-Montserrat font-bold">Entrar</div>
         <FaArrowRight />
       </label>
 
