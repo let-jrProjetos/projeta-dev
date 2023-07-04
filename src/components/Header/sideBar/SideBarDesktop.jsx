@@ -27,14 +27,7 @@ export const SideBarDesktop = ({ user, setIsLogedIn, setIsSideBarDesktop }) => {
               <FaPager />
             </button>
           </Link>
-          <Link to={`/meusProjetos/${user.id}`}>
-            <button className="flex items-center hover:text-[#C3DCE3] active:text-blue-green">
-              <span className="font-Montserrat text-sm text-gray-header px-2">
-                Meus Projetos
-              </span>
-              <FaFolderOpen />
-            </button>
-          </Link>
+
           <Link to={`/novoProjeto/${user.id}`}>
             <button className="flex items-center hover:text-[#C3DCE3] active:text-blue-green">
               <span className="font-Montserrat text-sm text-gray-header px-2">
