@@ -13,7 +13,7 @@ import { ProfilePhoto } from "../profilePhoto/ProfilePhoto";
 export const SideBarDesktop = ({ user, setIsLogedIn, setIsSideBarDesktop }) => {
   return (
     <div
-      className="hidden absolute top-0 left-0 w-full h-screen bg-transparent lg:flex"
+      className="hidden absolute top-0 left-0 w-full h-screen bg-transparent lg:flex z-10"
       onClick={() => setIsSideBarDesktop(false)}
     >
       <div className="z-100 absolute right-40 top-14 w-48 h-4/6 bg-white rounded-2xl border-2 ">
