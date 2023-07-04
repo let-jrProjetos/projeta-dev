@@ -13,7 +13,7 @@ import { ProfilePhoto } from "../profilePhoto/ProfilePhoto";
 export const SideBarMobile = ({ user, setIsLogedIn, setSideBarMobile }) => {
   return (
     <div
-      className="absolute top-0 left-0 w-full h-screen bg-transparent lg:hidden"
+      className="absolute top-0 left-0 w-full h-screen bg-transparent lg:hidden z-10"
       onClick={() => setSideBarMobile(false)}
     >
       <div className="z-100 absolute right-0 top-14 w-[4.5rem] h-4/6 bg-white rounded-2xl border-2 ">
