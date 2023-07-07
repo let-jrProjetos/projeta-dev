@@ -13,7 +13,7 @@ import { ProfilePhoto } from "../profilePhoto/ProfilePhoto";
 export const SideBarDesktop = ({ user, setIsLogedIn, setIsSideBarDesktop }) => {
   return (
     <div
-      className="hidden absolute top-0 left-0 w-full h-screen bg-transparent lg:flex"
+      className="hidden absolute top-0 left-0 w-full h-screen bg-transparent lg:flex z-10"
       onClick={() => setIsSideBarDesktop(false)}
     >
       <div className="z-100 absolute right-40 top-14 w-48 h-4/6 bg-white rounded-2xl border-2 ">
@@ -27,14 +27,7 @@ export const SideBarDesktop = ({ user, setIsLogedIn, setIsSideBarDesktop }) => {
               <FaPager />
             </button>
           </Link>
-          <Link to={`/meusProjetos/${user.id}`}>
-            <button className="flex items-center hover:text-[#C3DCE3] active:text-blue-green">
-              <span className="font-Montserrat text-sm text-gray-header px-2">
-                Meus Projetos
-              </span>
-              <FaFolderOpen />
-            </button>
-          </Link>
+
           <Link to={`/novoProjeto/${user.id}`}>
             <button className="flex items-center hover:text-[#C3DCE3] active:text-blue-green">
               <span className="font-Montserrat text-sm text-gray-header px-2">
