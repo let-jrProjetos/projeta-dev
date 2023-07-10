@@ -2,7 +2,7 @@ import { useForm } from "../../hooks/useForm";
 import { FaEnvelope, FaUser, FaLock } from "react-icons/fa";
 
 export const SingIn = () => {
-  const { form, onChange } = useForm({
+  const { form, onChange, resetForm } = useForm({
     email: "",
     name: "",
     password: "",
@@ -12,6 +12,7 @@ export const SingIn = () => {
   const submitFormSingIn = (event) => {
     event.preventDefault();
     console.log(form);
+    resetForm();
   };
 
   return (
@@ -104,12 +105,16 @@ export const SingIn = () => {
               <label
                 htmlFor="modalSingIn"
                 type="submit"
-                className="btn col-start-2 col-span-2 bg-blue-green border-2 border-transparent mt-4 mb-6 rounded-2xl font-Dela font-thin text-xs capitalize tracking-[.15em] hover:bg-white hover:border-2 hover:border-[#2B788B] hover:text-[#2B788B]"
+                className="btn col-start-2 col-span-2 bg-blue-green border-2 border-transparent mt-4 mb-2 rounded-2xl font-Dela font-thin text-xs capitalize tracking-[.15em] hover:bg-white hover:border-2 hover:border-[#2B788B] hover:text-[#2B788B]"
               >
                 Registrar-se
               </label>
             </div>
           </form>
+
+          <div className="font-Dela text-xs mb-6 btn-link text-blue-green no-underline hover:cursor-pointer">
+            Já tenho uma conta
+          </div>
         </div>
       </div>
     </div>

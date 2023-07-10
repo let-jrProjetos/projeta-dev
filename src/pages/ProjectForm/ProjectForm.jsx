@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "../../hooks/useForm";
 
 const ProjectFormPage = () => {
-  const { form, onChange } = useForm({
+  const { form, onChange, resetForm } = useForm({
     projectName: "",
     link: "",
     startDate: "",
@@ -61,11 +61,11 @@ const ProjectFormPage = () => {
   const submitForm = (event) => {
     event.preventDefault();
     console.log(form);
+    resetForm();
   };
 
   return (
-    <div className="bg-[#F6F5F4] flex flex-col items-center py-12">
-      <header className="font-Dela text-black h-20">Cabeçalho</header>
+    <div className="bg-[#F6F5F4] flex flex-col items-center">
       <div className="bg-[#FFFFFF] font-Montserrat min-w-min rounded-xl m-10 px-12 py-12 flex flex-row flex-wrap justify-center gap-8">
         <img
           className="rounded-full"
@@ -108,7 +108,7 @@ const ProjectFormPage = () => {
           value={form.projectName}
           type="text"
           onChange={onChange}
-          className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"
+          className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 rounded-2xl outline-[#2B788B]/80"
           required
         />
 
@@ -121,7 +121,7 @@ const ProjectFormPage = () => {
           value={form.link}
           type="url"
           onChange={onChange}
-          className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"
+          className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 rounded-2xl outline-[#2B788B]/80"
           required
         />
 
@@ -135,7 +135,7 @@ const ProjectFormPage = () => {
             value={form.startDate}
             type="date"
             onChange={onChange}
-            className="bg-[#C3DCE3] w-full px-4 py-2 text-[#757575]"
+            className="bg-[#C3DCE3] w-full px-4 py-2 rounded-2xl outline-[#2B788B]/80"
             required
           />
         </div>
@@ -149,7 +149,7 @@ const ProjectFormPage = () => {
             value={form.dueDate}
             type="date"
             onChange={onChange}
-            className="bg-[#C3DCE3] w-full px-4 py-2 text-[#757575]"
+            className="bg-[#C3DCE3] w-full px-4 py-2 rounded-2xl outline-[#2B788B]/80"
             required
           />
         </div>
@@ -163,7 +163,7 @@ const ProjectFormPage = () => {
           value={form.summary}
           type="text"
           onChange={onChange}
-          className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"
+          className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 rounded-2xl outline-[#2B788B]/80"
           required
         />
 
@@ -176,7 +176,7 @@ const ProjectFormPage = () => {
           value={form.desiredOutcome}
           type="text"
           onChange={onChange}
-          className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"
+          className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 rounded-2xl outline-[#2B788B]/80"
           required
         />
 
@@ -189,7 +189,7 @@ const ProjectFormPage = () => {
           value={form.beneficts}
           type="text"
           onChange={onChange}
-          className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"
+          className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 rounded-2xl outline-[#2B788B]/80"
           required
         />
 
@@ -202,7 +202,7 @@ const ProjectFormPage = () => {
           value={form.schedule}
           type="text"
           onChange={onChange}
-          className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"
+          className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 rounded-2xl outline-[#2B788B]/80"
           required
         />
 
@@ -215,7 +215,7 @@ const ProjectFormPage = () => {
           value={form.registrationDueDate}
           type="date"
           onChange={onChange}
-          className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 text-[#757575]"
+          className="bg-[#C3DCE3] w-full mb-2 px-4 py-2 rounded-2xl outline-[#2B788B]/80"
           required
         />
 
@@ -251,7 +251,7 @@ const ProjectFormPage = () => {
             value={form.otherLanguage}
             type="text"
             onChange={onChange}
-            className="bg-[#C3DCE3] w-32 mr-1 px-1 text-black"
+            className="bg-[#C3DCE3] w-32 mr-1 px-1 rounded-2xl outline-[#2B788B]/80"
           />
           <button
             id="other"
@@ -259,7 +259,7 @@ const ProjectFormPage = () => {
             value="other"
             type="button"
             onClick={() => updateLanguageOptions(form.otherLanguage)}
-            className="bg-[#C3DCE3] border-2 border-[#2B788B] max-w-3/6 px-2 py-1 text-black"
+            className="rounded-2xl bg-[#C3DCE3] border-2 border-[#2B788B] max-w-3/6 px-2 py-1 text-black"
           >
             Adicionar
           </button>
@@ -267,7 +267,7 @@ const ProjectFormPage = () => {
         <div className="flex justify-center mt-8">
           <button
             type="submit"
-            className="bg-[#2B788B] max-w-3/6 px-4 py-2 text-white "
+            className="bg-[#2B788B] max-w-3/6 px-4 py-2 text-white rounded-2xl"
           >
             Publicar!
           </button>
