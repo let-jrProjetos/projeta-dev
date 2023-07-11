@@ -2,7 +2,7 @@ import { useForm } from "../../hooks/useForm";
 import { FaArrowRight, FaEnvelope, FaLock } from "react-icons/fa";
 
 export const Login = () => {
-  const { form, onChange } = useForm({
+  const { form, onChange, resetForm } = useForm({
     email: "",
     password: "",
   });
@@ -10,6 +10,7 @@ export const Login = () => {
   const submitFormLogin = (event) => {
     event.preventDefault();
     console.log(form);
+    resetForm();
   };
 
   return (
