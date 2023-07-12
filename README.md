@@ -13,14 +13,10 @@
 
 <p>
   
- <img alt="OurVersion" src="https://img.shields.io/badge/Release-v.1.0.0-green
-">
- <img alt="StatusTestBack" src="https://img.shields.io/badge/Status%20Tests%20Backend-0%25-red
-">
-<img alt="StatusTestsFrontend" src="https://img.shields.io/badge/Status%20Tests%20Frontend-0%25-red
-">
-<img alt="StatusBackend" src="https://img.shields.io/badge/Status%20Build%20Backend-20%25-red
-">
+ <img alt="OurVersion" src="https://img.shields.io/badge/Release-v.1.0.0-green">
+ <img alt="StatusTestBack" src="https://img.shields.io/badge/Status%20Tests%20Backend-0%25-red">
+<img alt="StatusTestsFrontend" src="https://img.shields.io/badge/Status%20Tests%20Frontend-0%25-red">
+<img alt="StatusBackend" src="https://img.shields.io/badge/Status%20Build%20Backend-20%25-red">
 <img alt="StatusFrontend" src="https://img.shields.io/badge/Status%20Build%20Frontend-60%25-blue">
 <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 <a href="linkrepoaqui">
