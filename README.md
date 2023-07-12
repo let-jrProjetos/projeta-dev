@@ -93,16 +93,6 @@ The full layout of the application is available in Figma:
 
 ### Desktop
 
-# Usage
-
-### Login
-
-### Signup
-
-### New Project
-
-### Dashborad
-
 # Tests Frontend
 
 # Tests Backend
