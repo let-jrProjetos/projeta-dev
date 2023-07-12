@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import project from "../../../db.json";
 import { ProjectCard } from "../../components/Projects/ProjectCard";
 import ReactPaginate from "react-paginate";
-import { EmptyProjectPage } from "./src/components/Projects/EmptyProjectPage.jsx";
+import { EmptyProjectPage } from "../../components/Projects/EmptyProjectPage";
 import { FilterMenu } from "../../components/FilterMenu/FilterMenu";
 
 const ITEMS_PER_PAGE = 6;
