@@ -86,8 +86,7 @@ The full layout of the application is available in Figma:
 <br>
 
   <a href="https://www.figma.com/file/gifUlF0gqqYLgBDH9Xzdoh/Projeta-Dev?type=design&node-id=1%3A915&mode=design&t=yfGgX0oyuXVeuMq7-1">
-  <img alt="Layout Figma" src="https://img.shields.io/badge/Layout%20Figma-yellow
-    ">
+  <img alt="Layout Figma" src="https://img.shields.io/badge/Layout%20Figma-yellow">
   </a>
 
 ### Mobile
