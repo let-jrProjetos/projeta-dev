@@ -23,12 +23,10 @@
 <img alt="Repository Backend" src="https://img.shields.io/badge/Repository-Backend-green">
 </a>
 <a href="linkrepoaqui">
-<img alt="Repository Frontend" src="https://img.shields.io/badge/Repository-Frontend-green
-">
+<img alt="Repository Frontend" src="https://img.shields.io/badge/Repository-Frontend-green">
 </a>
 <a href="https://github.com/tgmarinho/nlw1/commits/master">
-<img alt="GitHub last commit" src="https://img.shields.io/badge/Last%20commit-July%202023-orange
-">
+<img alt="GitHub last commit" src="https://img.shields.io/badge/Last%20commit-July%202023-orange">
 </a>
 
 </p>
