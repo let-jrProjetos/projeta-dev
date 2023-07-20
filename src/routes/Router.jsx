@@ -8,6 +8,7 @@ import HomePage from "../pages/Home/Home";
 import ProjectFormPage from "../pages/ProjectForm/ProjectForm";
 import ProfilePage from "../pages/Profile/Profile";
 import SettingsPage from "../pages/Settings/Settings";
+import ErrorPage from "../pages/Error/Error";
 
 export const Router = () => {
   return (
@@ -21,6 +22,7 @@ export const Router = () => {
         <Route path="/novoProjeto/:id" element={<ProjectFormPage />} />
         <Route path="/meuPerfil/:id" element={<ProfilePage />} />
         <Route path="/editarPerfil/:id" element={<SettingsPage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
   );
