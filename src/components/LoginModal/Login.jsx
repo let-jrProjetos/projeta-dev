@@ -25,23 +25,23 @@ export const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
-      <div className="flex flex-col items-center justify-center">
+    <div className="flex items-center justify-center h-screen ">
+      <div className="flex flex-col items-center justify-center ">
         <label
           htmlFor="modalLogin"
-          className="btn-link flex justify-space-between items-center gap-1 text-sm text-black no-underline hover:cursor-pointer"
+          className="btn-link flex justify-space-between items-center gap-1 text-sm text-black no-underline hover:cursor-pointer "
         >
           <div className="font-Montserrat font-bold">Entrar</div>
           <FaArrowRight />
         </label>
 
-        <input type="checkbox" id="modalLogin" className="modal-toggle" />
+        <input type="checkbox" id="modalLogin" className="modal-toggle " />
         <div
-          className={`modal modal-center modal-middle flex items-center justify-center h-screen ${
+          className={`modal modal-center modal-middle flex items-center justify-center h-screen  ${
             displayPassword ? "hidden" : "block"
           }`}
         >
-          <div className="modal-box flex flex-col justify-center items-center">
+          <div className="modal-box flex flex-col justify-center items-center bg-white w-full ">
             <label
               htmlFor="modalLogin"
               className="btn bg-transparent border-none hover:bg-transparent font-Montserrat font-semibold text-base text-gray-header absolute right-2 top-2"
@@ -111,7 +111,7 @@ export const Login = () => {
                 <label
                   htmlFor="modalLogin"
                   type="submit"
-                  className="btn col-start-2 col-span-2 bg-blue-green border-2 border-transparent mt-2 mb-2 rounded-2xl font-Dela font-thin text-xs capitalize tracking-[.15em] hover:bg-white hover:border-2 hover:border-[#2B788B] hover:text-[#2B788B]"
+                  className="btn col-start-2 col-span-2 bg-blue-green border-2 border-transparent mt-5 mb-10 rounded-2xl font-Dela font-thin text-xs capitalize tracking-[.15em] hover:bg-white hover:border-2 hover:border-[#2B788B] hover:text-[#2B788B]"
                 >
                   Entrar
                 </label>

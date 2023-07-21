@@ -14,7 +14,7 @@ export const ForgotPassword = ({ onClose }) => {
 
   return (
     <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-50">
-      <div className="modal-box flex flex-col justify-center items-center bg-white rounded-lg p-6">
+      <div className="modal-box flex flex-col justify-center items-center bg-white rounded-lg p-6 w-full ">
         <label
           htmlFor="modalLogin"
           className="btn bg-transparent border-none hover:bg-transparent font-Montserrat font-semibold text-base text-gray-header absolute right-2 top-2"
@@ -25,7 +25,7 @@ export const ForgotPassword = ({ onClose }) => {
         <div className="font-bold font-Dela text-center my-6">
           RECUPERAR SENHA
         </div>
-        <div className="flex flex-col justify-center items-center">
+        <div className="text-center text-base font-Montserrat mt-5 mb-10 ">
           <p>
             Esqueceu sua senha? Digite seu e-mail cadastrado que enviaremos uma
             o código de ativação para redefinir sua senha.
@@ -54,7 +54,7 @@ export const ForgotPassword = ({ onClose }) => {
           <div className="modal-action grid grid-cols-4">
             <button
               type="submit"
-              className="btn col-start-2 col-span-2 bg-blue-green border-2 border-transparent mt-2 mb-2 rounded-2xl font-Dela font-thin text-xs capitalize tracking-[.15em] hover:bg-white hover:border-2 hover:border-[#2B788B] hover:text-[#2B788B]"
+              className="btn col-start-2 col-span-2 bg-blue-green border-2 border-transparent mt-5 mb-10 rounded-2xl font-Dela font-thin text-xs capitalize tracking-[.15em] hover:bg-white hover:border-2 hover:border-[#2B788B] hover:text-[#2B788B]"
             >
               Recuperar
             </button>
