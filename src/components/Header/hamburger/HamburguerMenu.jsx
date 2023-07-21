@@ -11,7 +11,7 @@ export const HamburguerMenu = ({ setIsBurguerOpen }) => {
           >
             X
           </button>
-          <div> NomeLogo</div>
+          <div className="font-Dela"> NomeLogo</div>
         </div>
         <div className="w-full h-full flex flex-col items-center justify-center font-Montserrat font-semibold text-base text-gray-text gap-y-6 pb-14">
           <Link to="/">

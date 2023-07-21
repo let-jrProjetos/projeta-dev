@@ -13,7 +13,8 @@
 
 <p>
   
- <img alt="OurVersion" src="https://img.shields.io/badge/Release-v.1.0.0-green">
+ <img alt="OurVersion" src="https://img.shields.io/badge/Release-v.1.0.0-green
+">
  <img alt="StatusTestBack" src="https://img.shields.io/badge/Status%20Tests%20Backend-0%25-red
 ">
 <img alt="StatusTestsFrontend" src="https://img.shields.io/badge/Status%20Tests%20Frontend-0%25-red
@@ -26,12 +27,10 @@
 <img alt="Repository Backend" src="https://img.shields.io/badge/Repository-Backend-green">
 </a>
 <a href="linkrepoaqui">
-<img alt="Repository Frontend" src="https://img.shields.io/badge/Repository-Frontend-green
-">
+<img alt="Repository Frontend" src="https://img.shields.io/badge/Repository-Frontend-green">
 </a>
 <a href="https://github.com/tgmarinho/nlw1/commits/master">
-<img alt="GitHub last commit" src="https://img.shields.io/badge/Last%20commit-July%202023-orange
-">
+<img alt="GitHub last commit" src="https://img.shields.io/badge/Last%20commit-July%202023-orange">
 </a>
 
 </p>
@@ -91,23 +90,12 @@ The full layout of the application is available in Figma:
 <br>
 
   <a href="https://www.figma.com/file/gifUlF0gqqYLgBDH9Xzdoh/Projeta-Dev?type=design&node-id=1%3A915&mode=design&t=yfGgX0oyuXVeuMq7-1">
-  <img alt="Layout Figma" src="https://img.shields.io/badge/Layout%20Figma-yellow
-    ">
+  <img alt="Layout Figma" src="https://img.shields.io/badge/Layout%20Figma-yellow">
   </a>
 
 ### Mobile
 
 ### Desktop
-
-# Usage
-
-### Login
-
-### Signup
-
-### New Project
-
-### Dashborad
 
 # Tests Frontend
 
