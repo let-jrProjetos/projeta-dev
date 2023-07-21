@@ -2,9 +2,11 @@ import { useState } from "react";
 import { useForm } from "../../hooks/useForm";
 import { FaArrowRight, FaEnvelope, FaLock } from "react-icons/fa";
 import { ForgotPassword } from "../PasswordsModal/ForgotPassword";
+import { SingIn } from "../SingInModal/SingIn";
 
 export const Login = () => {
   const [displayPassword, setDisplayPassword] = useState(false);
+  const [displaySignUp, setDisplaySignUp] = useState(false);
 
   const { form, onChange } = useForm({
     email: "",
@@ -24,6 +26,13 @@ export const Login = () => {
     setDisplayPassword(false);
   };
 
+  const openSignUpModal = () => {
+    setDisplaySignUp(true);
+  };
+
+  const closeSignUpModal = () => {
+    setDisplaySignUp(false);
+  };
   return (
     <div className="flex items-center justify-center h-screen ">
       <div className="flex flex-col items-center justify-center ">
@@ -120,10 +129,14 @@ export const Login = () => {
 
             <div className="font-Dela text-xs mb-6">
               Não tem uma conta?{" "}
-              <span className="btn-link font-Dela text-xs text-blue-green no-underline hover:cursor-pointer">
+              <span
+                className="btn-link font-Dela text-xs text-blue-green no-underline hover:cursor-pointer"
+                onClick={openSignUpModal}
+              >
                 Crie agora!
               </span>
             </div>
+            {displaySignUp && <SingIn onClose={closeSignUpModal} />}
           </div>
         </div>
 

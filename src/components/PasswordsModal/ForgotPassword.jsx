@@ -1,17 +1,28 @@
 import { useForm } from "../../hooks/useForm";
 import { FaEnvelope } from "react-icons/fa";
+import { ResetPassword } from "./ResetPassword";
+import { useState } from "react";
 
 export const ForgotPassword = ({ onClose }) => {
+  const [displayResetPassword, setDisplayResetPassword] = useState(false);
   const { form, onChange } = useForm({
     email: "",
   });
 
   const submitFormForgotPassword = (event) => {
     event.preventDefault();
-    console.log(form);
+
     onClose();
+    setDisplayResetPassword(true);
   };
 
+  const openResetPasswordModal = () => {
+    setDisplayResetPassword(true);
+  };
+
+  const closeResetPasswordModal = () => {
+    setDisplayResetPassword(false);
+  };
   return (
     <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-50">
       <div className="modal-box flex flex-col justify-center items-center bg-white rounded-lg p-6 w-full ">
@@ -53,8 +64,9 @@ export const ForgotPassword = ({ onClose }) => {
 
           <div className="modal-action grid grid-cols-4">
             <button
-              type="submit"
+              type="button"
               className="btn col-start-2 col-span-2 bg-blue-green border-2 border-transparent mt-5 mb-10 rounded-2xl font-Dela font-thin text-xs capitalize tracking-[.15em] hover:bg-white hover:border-2 hover:border-[#2B788B] hover:text-[#2B788B]"
+              onClick={openResetPasswordModal}
             >
               Recuperar
             </button>
@@ -71,6 +83,9 @@ export const ForgotPassword = ({ onClose }) => {
           </span>
         </div>
       </div>
+      {displayResetPassword && (
+        <ResetPassword onClose={closeResetPasswordModal} />
+      )}
     </div>
   );
 };

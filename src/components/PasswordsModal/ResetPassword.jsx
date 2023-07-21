@@ -1,14 +1,15 @@
 import { useForm } from "../../hooks/useForm";
-import { FaEnvelope } from "react-icons/fa";
+import { FaEnvelope, FaLock } from "react-icons/fa";
 
 export const ResetPassword = ({ onClose }) => {
   const { form, onChange } = useForm({
-    email: "",
+    password: "",
+    code: "",
   });
 
-  const submitFormForgotPassword = (event) => {
+  const submitFormResetPassword = (event) => {
     event.preventDefault();
-    console.log(form);
+
     onClose();
   };
 
@@ -33,7 +34,7 @@ export const ResetPassword = ({ onClose }) => {
         </div>
 
         <form
-          onSubmit={submitFormForgotPassword}
+          onSubmit={submitFormResetPassword}
           className="w-11/12 flex flex-col space-y-6"
         >
           <div className="flex flex-row justify-start items-center gap-1 bg-[#C3DCE3] px-4 py-2 rounded-2xl focus-within:outline focus-within:outline-[#2B788B]/80">
@@ -50,20 +51,7 @@ export const ResetPassword = ({ onClose }) => {
               className="w-full border-none focus:outline-none bg-transparent"
             />
           </div>
-          <div className="flex flex-row justify-start items-center gap-1 bg-[#C3DCE3] px-4 py-2 rounded-2xl focus-within:outline focus-within:outline-[#2B788B]/80">
-            <FaEnvelope className="fill-[#757575]" />
-            <label htmlFor="email"></label>
-            <input
-              id="email"
-              name="email"
-              value={form.email}
-              onChange={onChange}
-              type="email"
-              placeholder="E-mail"
-              required
-              className="w-full border-none focus:outline-none bg-transparent"
-            />
-          </div>
+
           <div className="flex flex-row justify-start items-center gap-1 bg-[#C3DCE3] px-4 py-2 rounded-2xl focus-within:outline focus-within:outline-[#2B788B]/80">
             <FaLock className="fill-[#757575]" />
             <label htmlFor="password"></label>
