@@ -1,7 +1,15 @@
+import { useState } from "react";
 import { useForm } from "../../hooks/useForm";
 import { FaArrowRight, FaEnvelope, FaLock } from "react-icons/fa";
+import { ForgotPassword } from "../PasswordsModal/ForgotPassword";
 
 export const Login = () => {
+  const [exibirModalRecuperacaoSenha, setExibirModalRecuperacaoSenha] =
+    useState(false);
+
+  const handleCliqueRecuperacaoSenha = () => {
+    setExibirModalRecuperacaoSenha(!exibirModalRecuperacaoSenha);
+  };
   const { form, onChange } = useForm({
     email: "",
     password: "",
@@ -70,9 +78,18 @@ export const Login = () => {
             </div>
 
             <div className="flex flex-col gap-2 md:flex-row md:justify-between">
-              <p className="btn-link font-Dela text-xs text-blue-green no-underline hover:cursor-pointer md:order-last">
+              <span
+                onClick={handleCliqueRecuperacaoSenha}
+                className="btn-link font-Dela text-xs text-blue-green no-underline hover:cursor-pointer md:order-last"
+              >
                 Esqueceu sua senha?
-              </p>
+              </span>
+
+              {exibirModalRecuperacaoSenha && (
+                <div className="modal-password-recovery">
+                  <ForgotPassword />
+                </div>
+              )}
               <div>
                 <input
                   id="remember"

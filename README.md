@@ -13,8 +13,7 @@
 
 <p>
   
- <img alt="OurVersion" src="https://img.shields.io/badge/Release-v.1.0.0-green
-">
+ <img alt="OurVersion" src="https://img.shields.io/badge/Release-v.1.0.0-green">
  <img alt="StatusTestBack" src="https://img.shields.io/badge/Status%20Tests%20Backend-0%25-red
 ">
 <img alt="StatusTestsFrontend" src="https://img.shields.io/badge/Status%20Tests%20Frontend-0%25-red
