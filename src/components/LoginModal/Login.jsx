@@ -136,10 +136,8 @@ export const Login = () => {
                 Crie agora!
               </span>
             </div>
-            {displaySignUp && <SingIn onClose={closeSignUpModal} />}
           </div>
         </div>
-
         {displayPassword && (
           <ForgotPassword onClose={closeForgotPasswordModal} />
         )}
