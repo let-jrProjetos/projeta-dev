@@ -62,7 +62,7 @@ export const SingIn = () => {
               <input
                 id="name"
                 name="name"
-                value={form.emailname}
+                value={form.name}
                 onChange={onChange}
                 type="text"
                 placeholder="Nome completo"
