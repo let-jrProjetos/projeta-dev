@@ -24,11 +24,7 @@ export const SideBarMobile = ({ user, setIsLogedIn, setSideBarMobile }) => {
               <FaPager />
             </button>
           </Link>
-          <Link to={`/meusProjetos/${user.id}`}>
-            <button className="hover:text-[#C3DCE3] active:text-blue-green">
-              <FaFolderOpen />
-            </button>
-          </Link>
+
           <Link to={`/novoProjeto/${user.id}`}>
             <button className="hover:text-[#C3DCE3] active:text-blue-green">
               <FaFolderPlus />
