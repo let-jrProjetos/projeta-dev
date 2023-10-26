@@ -9,7 +9,7 @@ import { SideBarDesktop } from "./sideBar/SideBarDesktop";
 import { SideBarMobile } from "./sideBar/SideBarMobile";
 
 export const Header = () => {
-  const [isLogedIn, setIsLogedIn] = useState(true);
+  const [isLogedIn, setIsLogedIn] = useState(false);
   const [user, setUser] = useState({ name: "Alex", id: "AlexA" });
   const [isBurguerOpen, setIsBurguerOpen] = useState(false);
   const [isSideBarMobile, setIsSideBarMobile] = useState(false);
