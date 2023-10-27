@@ -119,7 +119,7 @@ export const Login = () => {
               <div className="modal-action grid grid-cols-4">
                 <button
                   type="submit"
-                  className="btn col-start-2 col-span-2 bg-blue-green border-2 border-transparent mt-5 mb-10 rounded-2xl font-Dela font-thin text-xs capitalize tracking-[.15em] hover:bg-white hover:border-2 hover:border-[#2B788B] hover:text-[#2B788B]"
+                  className="btn text-white col-start-2 col-span-2 bg-blue-green border-2 border-transparent mt-5 mb-10 rounded-2xl font-Dela font-thin text-xs capitalize tracking-[.15em] hover:bg-white hover:border-2 hover:border-[#2B788B] hover:text-[#2B788B]"
                 >
                   Entrar
                 </button>
@@ -127,7 +127,8 @@ export const Login = () => {
             </form>
 
             <div className="font-Dela text-xs mb-6 flex justify-center items-center ">
-              Não tem uma conta?{" "}
+              <div className="m-4"> Não tem uma conta? </div>
+
               {/* <span
                 className="btn-link font-Dela text-xs text-blue-green no-underline hover:cursor-pointer"
                 onClick={openSignUpModal}
