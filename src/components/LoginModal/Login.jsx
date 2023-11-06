@@ -25,14 +25,6 @@ export const Login = () => {
     setDisplayPassword(false);
   };
 
-  // const openSignUpModal = () => {
-  //   setDisplaySignUp(true);
-  // };
-
-  // const closeSignUpModal = () => {
-  //   setDisplaySignUp(false);
-  // };
-
   return (
     <div className="flex items-center justify-center h-screen">
       <div className="flex flex-col items-center justify-center">
@@ -44,21 +36,21 @@ export const Login = () => {
           <FaArrowRight />
         </label>
 
-        <input type="checkbox" id="modalLogin" className="modal-toggle" />
+        <input type="checkbox" id="modalLogin" className="modal-toggle " />
         <div
-          className={`modal modal-center modal-middle flex items-center justify-center h-screen  ${
-            displayPassword ? "hidden" : "block"
+          className={`  modal modal-center modal-middle flex items-center justify-center h-screen  ${
+            displayPassword ? " hidden" : "block"
           }`}
         >
           <div className="modal-box flex flex-col justify-center items-center bg-white w-full">
             <label
               htmlFor="modalLogin"
-              className="btn bg-transparent border-none hover:bg-transparent font-Montserrat font-semibold text-base text-gray-header absolute right-2 top-2"
+              className=" btn bg-transparent border-none hover:bg-transparent font-Montserrat font-semibold text-base text-gray-header absolute right-2 top-2"
               onClick={closeForgotPasswordModal}
             >
               ✕
             </label>
-            <div className="font-bold font-Dela text-center my-6">
+            <div className=" font-bold font-Dela text-center my-6">
               NOSSO NOME AQUI
             </div>
 
@@ -135,7 +127,7 @@ export const Login = () => {
               >
                 Crie agora!
               </span> */}
-              <SingIn />
+              <SingIn onClose={closeForgotPasswordModal} />
             </div>
           </div>
         </div>

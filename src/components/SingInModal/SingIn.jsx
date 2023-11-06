@@ -1,7 +1,8 @@
 import { useForm } from "../../hooks/useForm";
 import { FaEnvelope, FaUser, FaLock } from "react-icons/fa";
+import { Login } from "../LoginModal/Login";
 
-export const SingIn = () => {
+export const SingIn = ({ onClose }) => {
   const { form, onChange, resetForm } = useForm({
     email: "",
     name: "",
@@ -13,6 +14,7 @@ export const SingIn = () => {
     event.preventDefault();
     console.log(form);
     resetForm();
+    onClose();
   };
 
   return (
@@ -24,9 +26,9 @@ export const SingIn = () => {
         Cadastrar
       </label>
 
-      <input type="checkbox" id="modalSingIn" className="modal-toggle" />
-      <div className="modal modal-center modal-middle">
-        <div className="modal-box flex flex-col justify-center items-center">
+      <input type="checkbox" id="modalSingIn" className="modal-toggle " />
+      <div className=" modal modal-center modal-middle">
+        <div className=" bg-white modal-box flex flex-col justify-center items-center">
           <label
             htmlFor="modalSingIn"
             className="btn bg-transparent border-none hover:bg-transparent font-Montserrat font-semibold text-base text-gray-header absolute right-2 top-2"
@@ -105,15 +107,17 @@ export const SingIn = () => {
               <label
                 htmlFor="modalSingIn"
                 type="submit"
-                className="btn col-start-2 col-span-2 bg-blue-green border-2 border-transparent mt-4 mb-2 rounded-2xl font-Dela font-thin text-xs capitalize tracking-[.15em] hover:bg-white hover:border-2 hover:border-[#2B788B] hover:text-[#2B788B]"
+                className="text-white btn col-start-2 col-span-2 bg-blue-green border-2 border-transparent mt-4 mb-2 rounded-2xl font-Dela font-thin text-xs capitalize tracking-[.15em] hover:bg-white hover:border-2 hover:border-[#2B788B] hover:text-[#2B788B]"
               >
                 Registrar-se
               </label>
             </div>
           </form>
-
-          <div className="font-Dela text-xs mb-6 btn-link text-blue-green no-underline hover:cursor-pointer">
-            Já tenho uma conta
+          <div className="font-Dela text-xs mb-6 flex justify-center items-center">
+            <div className="font-Dela text-xs mb-6 btn-link text-blue-green no-underline hover:cursor-pointer">
+              Já tem uma conta?
+            </div>
+            {/* <Login /> */}
           </div>
         </div>
       </div>
