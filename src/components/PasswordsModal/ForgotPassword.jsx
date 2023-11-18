@@ -65,7 +65,7 @@ export const ForgotPassword = ({ onClose }) => {
           <div className="modal-action grid grid-cols-4">
             <button
               type="button"
-              className="btn col-start-2 col-span-2 bg-blue-green border-2 border-transparent mt-5 mb-10 rounded-2xl font-Dela font-thin text-xs capitalize tracking-[.15em] hover:bg-white hover:border-2 hover:border-[#2B788B] hover:text-[#2B788B]"
+              className="btn text-white col-start-2 col-span-2 bg-blue-green border-2 border-transparent mt-5 mb-10 rounded-2xl font-Dela font-thin text-xs capitalize tracking-[.15em] hover:bg-white hover:border-2 hover:border-[#2B788B] hover:text-[#2B788B]"
               onClick={openResetPasswordModal}
             >
               Recuperar

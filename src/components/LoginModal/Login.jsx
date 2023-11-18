@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { useForm } from "../../hooks/useForm";
-import { FaArrowRight, FaEnvelope, FaLock, FaUser } from "react-icons/fa";
+import { FaArrowRight, FaEnvelope, FaLock } from "react-icons/fa";
 import { ForgotPassword } from "../PasswordsModal/ForgotPassword";
 import { SingIn } from "../SingInModal/SingIn";
 
 export const Login = () => {
   const [displayPassword, setDisplayPassword] = useState(false);
+  const [displaySignUp, setDisplaySignUp] = useState(false);
 
-  const { form, onChange, resetForm } = useForm({
+  const { form, onChange } = useForm({
     email: "",
     password: "",
   });
@@ -25,12 +26,19 @@ export const Login = () => {
     setDisplayPassword(false);
   };
 
+  const openSignUpModal = () => {
+    setDisplaySignUp(true);
+  };
+
+  const closeSignUpModal = () => {
+    setDisplaySignUp(false);
+  };
   return (
-    <div className="flex items-center justify-center h-screen">
-      <div className="flex flex-col items-center justify-center">
+    <div className="flex items-center justify-center h-screen ">
+      <div className="flex flex-col items-center justify-center ">
         <label
           htmlFor="modalLogin"
-          className="btn-link flex justify-space-between items-center gap-1 text-sm text-black no-underline hover:cursor-pointer"
+          className="btn-link flex justify-space-between items-center gap-1 text-sm text-black no-underline hover:cursor-pointer "
         >
           <div className="font-Montserrat font-bold">Entrar</div>
           <FaArrowRight />
@@ -38,19 +46,19 @@ export const Login = () => {
 
         <input type="checkbox" id="modalLogin" className="modal-toggle " />
         <div
-          className={`  modal modal-center modal-middle flex items-center justify-center h-screen  ${
-            displayPassword ? " hidden" : "block"
+          className={`modal modal-center modal-middle flex items-center justify-center h-screen  ${
+            displayPassword ? "hidden" : "block"
           }`}
         >
-          <div className="modal-box flex flex-col justify-center items-center bg-white w-full">
+          <div className="modal-box flex flex-col justify-center items-center bg-white w-full ">
             <label
               htmlFor="modalLogin"
-              className=" btn bg-transparent border-none hover:bg-transparent font-Montserrat font-semibold text-base text-gray-header absolute right-2 top-2"
+              className="btn bg-transparent border-none hover:bg-transparent font-Montserrat font-semibold text-base text-gray-header absolute right-2 top-2"
               onClick={closeForgotPasswordModal}
             >
               ✕
             </label>
-            <div className=" font-bold font-Dela text-center my-6">
+            <div className="font-bold font-Dela text-center my-6">
               NOSSO NOME AQUI
             </div>
 
@@ -118,19 +126,18 @@ export const Login = () => {
               </div>
             </form>
 
-            <div className="font-Dela text-xs mb-6 flex justify-center items-center ">
-              <div className="m-4"> Não tem uma conta? </div>
-
-              {/* <span
+            <div className="font-Dela text-xs mb-6">
+              Não tem uma conta?{" "}
+              <span
                 className="btn-link font-Dela text-xs text-blue-green no-underline hover:cursor-pointer"
                 onClick={openSignUpModal}
               >
                 Crie agora!
-              </span> */}
-              <SingIn onClose={closeForgotPasswordModal} />
+              </span>
             </div>
           </div>
         </div>
+
         {displayPassword && (
           <ForgotPassword onClose={closeForgotPasswordModal} />
         )}
